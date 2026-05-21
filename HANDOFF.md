@@ -91,6 +91,7 @@ GitHub is synchronized with `origin/main`.
 - GitHub: synchronized with `origin/main`.
 - Working tree: clean at the last checkpoint.
 - JavaScript: not started yet.
+- `script.js` now contains a minimal `transactions` array with 4 objects and outputs it to the console only; no DOM changes yet.
 - No technical blockers currently known.
 
 ## First JavaScript plan
