@@ -59,6 +59,9 @@ GitHub is synchronized with `origin/main`.
 - Tightened spacing below the header.
 - Unified section spacing with a `24px` rhythm.
 - Increased spacing between `category-card` blocks.
+- Limited paragraph width in `summary-section` for easier reading.
+- Limited transaction list width for easier reading.
+- Limited paragraph width inside `category-card`.
 - CSS remains simple and beginner-friendly.
 
 ## Important Decisions
