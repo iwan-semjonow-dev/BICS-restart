@@ -62,6 +62,9 @@ GitHub is synchronized with `origin/main`.
 - Limited paragraph width in `summary-section` for easier reading.
 - Limited transaction list width for easier reading.
 - Limited paragraph width inside `category-card`.
+- Added a mobile breakpoint at `600px`.
+- Reduced page and section padding on small screens.
+- Reduced heading sizes on small screens.
 - CSS remains simple and beginner-friendly.
 
 ## Important Decisions

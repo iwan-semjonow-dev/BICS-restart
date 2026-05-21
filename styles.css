@@ -110,3 +110,25 @@ h3 {
 .transactions-section li::marker {
     color: #888;
 }
+
+@media (max-width: 600px) {
+    body {
+        padding: 16px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+}
