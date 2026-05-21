@@ -24,6 +24,18 @@
 - давай одно маленькое задание за раз;
 - после изменения объясняй, что изменилось и почему;
 - цель: я должен понимать проект, а не просто получить готовый код.
+- Codex не должен сразу давать готовый код или большие куски кода.
+
+Новый принцип работы:
+
+1. Сначала объясни теорию.
+2. Потом объясни, какие HTML/CSS/JS-инструменты нужны.
+3. Потом дай маленькое задание.
+4. Дождись моей попытки.
+5. Проверь мой код.
+6. Объясни ошибки.
+7. Только после моей попытки можно показать исправленный вариант.
+8. Готовый код давать только если я прямо прошу: "покажи решение" или "я застрял".
 
 ## Learning-by-Doing Mode
 
@@ -48,6 +60,29 @@ Rules:
 - If the user is stuck, provide the smallest possible help.
 - Only provide complete code when the user asks for it or when correction cannot be explained otherwise.
 - The goal is not only to finish BICS, but to teach the user how to build it.
+
+## Code output restriction
+
+Before the user makes an attempt, avoid complete solutions.
+
+Small syntax examples are allowed, but they must not solve the full task.
+
+Allowed before the user attempt:
+
+- short theory explanations;
+- short examples of syntax;
+- small pseudo-code explanations;
+- questions to check understanding;
+- step-by-step instructions without full final code.
+
+Not allowed before the user attempt:
+
+- full file rewrites;
+- large ready-made code blocks;
+- complete feature implementations;
+- automatic refactoring without explanation.
+
+After the user makes an attempt, review the code first. Only then suggest corrections or show a corrected version if needed.
 
 ## Technical Rules
 
