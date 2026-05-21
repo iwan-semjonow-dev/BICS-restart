@@ -72,6 +72,7 @@ GitHub is synchronized with `origin/main`.
 - Added a subtle border to sections.
 - Slightly deepened `category-card` background contrast.
 - Slightly tightened letter spacing for `h1` and `h2`.
+- Added a global `box-sizing: border-box` reset.
 - CSS remains simple and beginner-friendly.
 
 ## Important Decisions
