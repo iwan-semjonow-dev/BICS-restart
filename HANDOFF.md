@@ -46,6 +46,10 @@ GitHub is synchronized with `origin/main`.
 - Made list selectors more precise with `transactions-section`.
 - Set explicit font sizes for `h1`, `h2`, and `h3`.
 - Made the header subtitle visually quieter with smaller text and softer color.
+- Added explicit base `font-size: 16px` for `body`.
+- Normalized spacing between paragraphs in `summary-section`.
+- Tightened header subtitle line height.
+- Set tighter line height for `h1`, `h2`, and `h3`.
 - CSS remains simple and beginner-friendly.
 
 ## Important Decisions
