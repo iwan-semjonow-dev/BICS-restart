@@ -52,7 +52,10 @@ Already done:
   - `categories-section`
   - `transactions-section`
 - class names describe the role of each block, not its visual style;
-- the HTML structure became cleaner and easier to understand.
+- the HTML structure became cleaner and easier to understand;
+- set explicit font sizes for `h1`, `h2`, and `h3`;
+- the user practiced understanding typographic hierarchy;
+- the header subtitle became visually quieter with smaller text and softer color.
 
 ## Agreed First MVP
 
@@ -145,10 +148,9 @@ A new person should understand within one minute:
 
 ## Next Steps
 
-1. Review the current section structure after adding role-based class names.
+1. Review the current typography after adjusting heading sizes.
 2. Continue with one small visual CSS improvement.
-3. Keep using simple class names based on meaning, not appearance.
-4. Later decide whether to add more dashboard sections again, such as expenses structure, recurring expenses, and goals.
+3. Keep visual hierarchy clear and simple.
 
 ## Recommended Next Prompt
 
@@ -172,6 +174,7 @@ Requirements:
 - no extra features
 
 Work as a teacher and explain the HTML structure simply.
+
 
 
 
