@@ -84,6 +84,18 @@ Not allowed before the user attempt:
 
 After the user makes an attempt, review the code first. Only then suggest corrections or show a corrected version if needed.
 
+## Skill failure rule
+
+If a requested skill is unavailable or cannot be loaded, do not silently continue in fallback mode.
+
+Instead:
+
+1. Stop the current task.
+2. Explain which skill failed to load.
+3. Check whether the skill path changed.
+4. Re-discover the current skill path if possible.
+5. Wait for my decision before continuing without the skill.
+
 ## Technical Rules
 
 - Пока используем только HTML, CSS и JavaScript.
