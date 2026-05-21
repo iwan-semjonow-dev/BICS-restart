@@ -38,7 +38,11 @@ Already done:
 - body styles added;
 - page width limited with `max-width`;
 - sections styled as simple readable cards;
-- CSS remains beginner-friendly.
+- CSS remains beginner-friendly;
+- learned how HTML classes work;
+- added `categories-section` to the BICS categories section;
+- added `category-card` to all four category blocks;
+- replaced broad CSS selectors with more precise class-based selectors for category cards.
 
 ## Agreed First MVP
 
@@ -120,6 +124,7 @@ A new person should understand within one minute:
 ## Current Problems
 
 - no technical problems yet;
+- HTML and beginner-friendly CSS are in progress;
 - no JavaScript yet.
 
 ## Open Questions
@@ -130,9 +135,9 @@ A new person should understand within one minute:
 
 ## Next Steps
 
-1. Review the current CSS.
-2. Continue with small CSS improvements.
-3. Keep the workflow: `explain → small assignment → user attempt → review → next step`.
+1. Review the current HTML and CSS structure after introducing classes.
+2. Continue improving the simple visual style with small CSS steps.
+3. Keep using class names based on element roles, not on specific content.
 
 ## Recommended Next Prompt
 
@@ -156,6 +161,7 @@ Requirements:
 - no extra features
 
 Work as a teacher and explain the HTML structure simply.
+
 
 
 
