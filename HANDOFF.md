@@ -93,6 +93,17 @@ GitHub is synchronized with `origin/main`.
 - JavaScript: not started yet.
 - No technical blockers currently known.
 
+## First JavaScript plan
+
+- Create a minimal `transactions` array in `script.js`.
+- Use 4 objects based on the current transaction examples.
+- Each object should have only three fields: `title`, `reason`, `category`.
+- `category` must use exact BICS names: `Basic`, `Invest`, `Chaos`, `Signal`.
+- First JS checkpoint: output the array to the console only.
+- Do not change the HTML yet.
+- Do not render anything to the page yet.
+- No DOM changes yet.
+
 ## Next Small Step
 
 Review the current typography and continue with one small visual CSS improvement while keeping the page simple.
