@@ -16,8 +16,8 @@ Files:
 - `README.md` — filled
 - `AGENTS.md` — filled
 - `HANDOFF.md` — being updated now
-- `index.html` — empty
-- `styles.css` — empty
+- `index.html` — filled
+- `styles.css` — filled
 - `script.js` — empty
 
 Old project folder `d:\Codex\BICS` was not changed.
@@ -33,7 +33,12 @@ Already done:
 - created the first `index.html` structure by hand with the user;
 - added `header`, summary section, BICS categories section, and example transactions section;
 - the user practiced HTML heading hierarchy: `h1 → h2 → h3`;
-- the user cleaned up spacing to make the HTML easier to read.
+- the user cleaned up spacing to make the HTML easier to read;
+- initial CSS started;
+- body styles added;
+- page width limited with `max-width`;
+- sections styled as simple readable cards;
+- CSS remains beginner-friendly.
 
 ## Agreed First MVP
 
@@ -115,7 +120,7 @@ A new person should understand within one minute:
 ## Current Problems
 
 - no technical problems yet;
-- CSS and JavaScript have not started yet.
+- no JavaScript yet.
 
 ## Open Questions
 
@@ -125,8 +130,8 @@ A new person should understand within one minute:
 
 ## Next Steps
 
-1. Review whether the current HTML structure fully matches the agreed MVP.
-2. If approved, begin the first small CSS learning task.
+1. Review the current CSS.
+2. Continue with small CSS improvements.
 3. Keep the workflow: `explain → small assignment → user attempt → review → next step`.
 
 ## Recommended Next Prompt
@@ -151,5 +156,6 @@ Requirements:
 - no extra features
 
 Work as a teacher and explain the HTML structure simply.
+
 
 
