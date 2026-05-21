@@ -68,6 +68,9 @@ GitHub is synchronized with `origin/main`.
 - Reduced `category-card` spacing on small screens.
 - Reduced `category-card` padding on small screens.
 - Reduced transaction list indentation on small screens.
+- Softened section shadow.
+- Added a subtle border to sections.
+- Slightly deepened `category-card` background contrast.
 - CSS remains simple and beginner-friendly.
 
 ## Important Decisions
