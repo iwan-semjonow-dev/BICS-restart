@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 24px;
+    background-color: #f5f5f5;
+    color: #222;
+}
+
+header {
+    margin-bottom: 32px;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+header p {
+    margin: 0;
+    color: #666;
+}
+
+section {
+    margin-bottom: 32px;
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 12px;
+}
