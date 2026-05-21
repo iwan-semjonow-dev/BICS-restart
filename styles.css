@@ -64,6 +64,7 @@ h2 {
     background-color: #fafafa;
     padding: 16px;
     border-radius: 8px;
+    border: 1px solid #eaeaea;
 }
 
 .category-card:last-child {
@@ -79,6 +80,7 @@ h3 {
 
 .category-card p {
     margin: 0 0 8px;
+    color: #444;
 }
 
 .category-card p:last-child {
@@ -93,6 +95,7 @@ h3 {
 
 .transactions-section li {
     margin-bottom: 8px;
+    line-height: 1.4;
 }
 
 .transactions-section li:last-child {

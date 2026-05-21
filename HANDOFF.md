@@ -50,6 +50,9 @@ GitHub is synchronized with `origin/main`.
 - Normalized spacing between paragraphs in `summary-section`.
 - Tightened header subtitle line height.
 - Set tighter line height for `h1`, `h2`, and `h3`.
+- Added a subtle border to `category-card` blocks.
+- Improved list readability with custom line height for transaction items.
+- Softened paragraph text color inside `category-card`.
 - CSS remains simple and beginner-friendly.
 
 ## Important Decisions
