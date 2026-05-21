@@ -53,6 +53,9 @@ GitHub is synchronized with `origin/main`.
 - Added a subtle border to `category-card` blocks.
 - Improved list readability with custom line height for transaction items.
 - Softened paragraph text color inside `category-card`.
+- Softened example text in `category-card`.
+- Softened paragraph text in `summary-section`.
+- Styled transaction list markers with a softer color.
 - CSS remains simple and beginner-friendly.
 
 ## Important Decisions

@@ -46,6 +46,7 @@ main {
 
 .summary-section p {
     margin: 0 0 12px;
+    color: #444;
 }
 
 .summary-section p:last-child {
@@ -85,6 +86,7 @@ h3 {
 
 .category-card p:last-child {
     margin-bottom: 0;
+    color: #666;
 }
 
 .transactions-section ul {
@@ -100,4 +102,8 @@ h3 {
 
 .transactions-section li:last-child {
     margin-bottom: 0;
+}
+
+.transactions-section li::marker {
+    color: #888;
 }
