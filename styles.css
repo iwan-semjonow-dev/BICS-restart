@@ -67,16 +67,16 @@ h3 {
     margin-bottom: 0;
 }
 
-ul {
+.transactions-section ul {
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 20px;
 }
 
-li {
+.transactions-section li {
     margin-bottom: 8px;
 }
 
-li:last-child {
+.transactions-section li:last-child {
     margin-bottom: 0;
 }

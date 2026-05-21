@@ -42,7 +42,10 @@ Already done:
 - learned how HTML classes work;
 - added `categories-section` to the BICS categories section;
 - added `category-card` to all four category blocks;
-- replaced broad CSS selectors with more precise class-based selectors for category cards.
+- replaced broad CSS selectors with more precise class-based selectors for category cards;
+- added `transactions-section` to the example transactions section;
+- replaced broad list selectors with more precise transaction-section selectors;
+- the user practiced choosing selectors by element role and context.
 
 ## Agreed First MVP
 
@@ -135,9 +138,9 @@ A new person should understand within one minute:
 
 ## Next Steps
 
-1. Review the current HTML and CSS structure after introducing classes.
-2. Continue improving the simple visual style with small CSS steps.
-3. Keep using class names based on element roles, not on specific content.
+1. Review whether the main structural sections now have clear class names.
+2. Continue with one small visual improvement at a time.
+3. Keep CSS selectors precise, but avoid unnecessary complexity.
 
 ## Recommended Next Prompt
 
@@ -161,6 +164,7 @@ Requirements:
 - no extra features
 
 Work as a teacher and explain the HTML structure simply.
+
 
 
 
