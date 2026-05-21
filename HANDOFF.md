@@ -73,6 +73,7 @@ GitHub is synchronized with `origin/main`.
 - Slightly deepened `category-card` background contrast.
 - Slightly tightened letter spacing for `h1` and `h2`.
 - Added a global `box-sizing: border-box` reset.
+- Softened transaction list item text color.
 - CSS remains simple and beginner-friendly.
 
 ## Important Decisions

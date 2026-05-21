@@ -108,6 +108,7 @@ h3 {
 .transactions-section li {
     margin-bottom: 8px;
     line-height: 1.4;
+    color: #444;
 }
 
 .transactions-section li:last-child {
