@@ -122,6 +122,22 @@ Instead:
 4. Re-discover the current skill path if possible.
 5. Wait for my decision before continuing without the skill.
 
+## Superpowers usage rule
+
+At the beginning of a new BICS work session, Codex should check `superpowers:using-superpowers`.
+
+For planning tasks, use `superpowers:writing-plans`.
+
+For choosing the next implementation step, use `superpowers:brainstorming`.
+
+For debugging errors, use `superpowers:systematic-debugging`.
+
+For checking work before finishing, use `superpowers:verification-before-completion` when appropriate.
+
+If a Superpowers path is stale, re-discover the current cache path before continuing.
+
+Do not use Superpowers mechanically for every tiny action. Use them when they help with planning, debugging, verification, or choosing the next step.
+
 ## Git rules
 
 Codex may run git status freely.
