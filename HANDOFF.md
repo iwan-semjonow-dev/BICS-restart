@@ -6,6 +6,44 @@ BICS — Financial Energy System is being rebuilt as a beginner-friendly portfol
 
 The first MVP is a clear one-page explanation of the BICS model, not a full finance tool yet.
 
+## Long-Term Goal
+
+BICS — Financial Energy System is a long-term, beginner-friendly portfolio project built with HTML, CSS, and JavaScript.
+
+The goal of BICS is to help understand personal spending not only by amount, but by the behavioral reason behind each purchase. The core BICS categories must remain exact: `Basic`, `Invest`, `Chaos`, and `Signal`.
+
+Codex should work as the user's teacher, mentor, and reviewer, not as a replacement for the user's own coding practice. The learning workflow is:
+
+1. Explain the theory first.
+2. Give one small assignment.
+3. Wait for the user's attempt.
+4. Review the attempt.
+5. Explain mistakes and give hints.
+6. Show corrected code only when needed or when the user asks.
+
+The future visual mockup in `assets/mockups/bics-future-dashboard.jpg` is the long-term product direction only. It shows that BICS may eventually become a dashboard-style web application with summary cards, a BICS circle, financial energy score, transactions, recurring expenses, goals, quick add, charts, filters, and reports.
+
+The full dashboard must not be built immediately. Current development should stay focused on small learning steps.
+
+The current stage is JavaScript data-first and console-first:
+
+- `script.js` contains transaction data.
+- JavaScript practice uses arrays, objects, indexes, variables, loops, conditions, category filtering, and count output.
+- DOM work has not started yet.
+- HTML, CSS, forms, calendar features, localStorage, and dashboard UI logic are out of scope until JavaScript fundamentals are stronger.
+
+The project must follow:
+
+- Git rules from `AGENTS.md`: no `git add`, commit, push, rebase, reset, or force push without explicit confirmation.
+- Language rules from `AGENTS.md`: visible UI text, transaction titles, reasons, labels, buttons, and section names should be in English; Russian is allowed for comments, teaching explanations, and learning notes.
+- Superpowers usage from `AGENTS.md`: use `superpowers:using-superpowers` at the beginning of a BICS work session, use planning/debugging/verification skills when they help, and re-discover stale Superpowers paths before continuing.
+
+At the beginning of a new BICS work session, Codex should read or review `README.md`, `AGENTS.md`, and `HANDOFF.md` before suggesting the next step.
+
+Codex must not expand the project scope on its own. If a new technology, feature, framework, or architectural change seems useful, Codex must explain why and ask for permission first.
+
+A step is considered successful only when the user understands the idea, makes or reviews the attempt, and the project advances through a small, clear checkpoint.
+
 ## Current Project State
 
 Project folder: `d:\Codex\BICS-restart`
