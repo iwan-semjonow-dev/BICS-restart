@@ -25,3 +25,29 @@ const transactions = [
 ];
 
 console.log(transactions);
+console.log(transactions.length);
+
+const firstTransaction = transactions[0];
+console.log(firstTransaction.title);
+console.log(firstTransaction.reason);
+console.log(firstTransaction.category);
+
+const secondTransaction = transactions[1];
+console.log(secondTransaction.title);
+console.log(secondTransaction.category);
+
+const lastTransaction = transactions[transactions.length - 1];
+console.log(lastTransaction.category);
+
+const targetCategory = "Basic";
+console.log("Searching category: " + targetCategory);
+
+let count = 0;
+
+for (let i = 0; i < transactions.length; i++) {
+    if (transactions[i].category === targetCategory) {
+        console.log(transactions[i].title + " - " + transactions[i].category);
+        count = count + 1;
+    }
+}
+console.log("Found: " + count);

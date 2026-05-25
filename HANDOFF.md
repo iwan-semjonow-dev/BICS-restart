@@ -99,6 +99,8 @@ GitHub is synchronized with `origin/main`.
 - Transaction `title` and `reason` values in `script.js` were translated to English.
 - BICS categories remain exact: `Basic`, `Invest`, `Chaos`, `Signal`.
 - Russian comments are allowed for learning support according to `AGENTS.md` language rules.
+- JavaScript Step 2 completed: reading transactions from the array, using indexes, variables, loop, category filter, and count output in console.
+- No DOM changes yet.
 - No technical blockers currently known.
 
 ## First JavaScript plan
