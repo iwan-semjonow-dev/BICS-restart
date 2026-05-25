@@ -138,6 +138,43 @@ If a Superpowers path is stale, re-discover the current cache path before contin
 
 Do not use Superpowers mechanically for every tiny action. Use them when they help with planning, debugging, verification, or choosing the next step.
 
+## Goal usage rule
+
+The long-term BICS Goal is documented in `HANDOFF.md` and should be treated as the permanent project direction.
+
+Codex must not assume that the active `/goal` command is always running.
+
+At the beginning of a new BICS work session, Codex should:
+
+1. Read or review `README.md`, `AGENTS.md`, and `HANDOFF.md`.
+2. Check whether the current task needs an active `/goal`.
+3. If the long-term BICS direction is needed, suggest a short `/goal` that points to the project documents.
+4. If a specific learning stage is starting, suggest a small stage-specific `/goal`.
+5. Wait for the user's explicit confirmation before asking the user to set or change `/goal`.
+
+Use the long-term Goal when:
+
+- starting a new BICS session;
+- recovering context;
+- checking project direction;
+- avoiding scope drift;
+- deciding whether a feature belongs now or later.
+
+Use a small stage-specific Goal when:
+
+- starting a concrete JavaScript learning block;
+- working through one focused implementation stage;
+- debugging one defined problem;
+- preparing a small checkpoint.
+
+Do not use `/goal` mechanically for every tiny action.
+
+A small Goal must be short, practical, and focused on the current stage.
+
+Example small Goal:
+
+`/goal Continue BICS JavaScript learning as a teacher and reviewer. Follow README.md, AGENTS.md, and HANDOFF.md. Current stage: data-first and console-first JavaScript. Do not touch DOM, HTML, CSS, forms, calendar, localStorage, React, or dashboard UI. Teach first, give one small assignment, wait for my attempt, then review.`
+
 ## Git rules
 
 Codex may run git status freely.
