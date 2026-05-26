@@ -130,15 +130,16 @@ GitHub is synchronized with `origin/main`.
 
 ## Current Status
 
-- GitHub: synchronized with `origin/main`.
-- Working tree: clean at the last checkpoint.
+- GitHub: synchronized with `origin/main` at the last committed checkpoint.
+- Working tree: clean at the last committed checkpoint.
 - JavaScript: started with data only; DOM is not started yet.
 - `script.js` now contains a minimal `transactions` array with 4 objects and outputs it to the console only; no DOM changes yet.
 - Transaction `title` and `reason` values in `script.js` were translated to English.
 - BICS categories remain exact: `Basic`, `Invest`, `Chaos`, `Signal`.
 - Russian comments are allowed for learning support according to `AGENTS.md` language rules.
 - JavaScript Step 2 completed: reading transactions from the array, using indexes, variables, loop, category filter, and count output in console.
-- No DOM changes yet.
+- JavaScript amount checkpoint completed: each transaction now has numeric `amount` data, amount values are read in the console, and `totalAmount` is calculated and displayed with console output.
+- No DOM, HTML, or CSS changes yet.
 - No technical blockers currently known.
 
 ## First JavaScript plan
