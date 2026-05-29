@@ -141,6 +141,8 @@ GitHub is synchronized with `origin/main`.
 - JavaScript amount checkpoint completed: each transaction now has numeric `amount` data, amount values are read in the console, and `totalAmount` is calculated and displayed with console output.
 - JavaScript sum by category checkpoint completed: `categoryTotal` now calculates the total `amount` for one `targetCategory` using a loop and `if` condition, while `totalAmount` still calculates the total amount across all transactions.
 - JavaScript expenseCategory checkpoint completed: each transaction now has a future practical `expenseCategory` layer, and `targetExpenseCategory` is used to find transactions by practical spending type in the console.
+- JavaScript expenseCategory total checkpoint completed: `expenseCategoryTotal` now calculates the total `amount` for one `targetExpenseCategory` using a loop and `if` condition.
+- This prepares the future expense structure section from the dashboard mockup.
 - BICS `category` still remains the behavioral layer: `Basic`, `Invest`, `Chaos`, `Signal`.
 - No DOM, HTML, or CSS changes yet.
 - No technical blockers currently known.

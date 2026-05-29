@@ -81,8 +81,12 @@ console.log(lastTransaction.expenseCategory);
 const targetExpenseCategory = "housing";
 console.log("Searching expense category: " + targetExpenseCategory);
 
+let expenseCategoryTotal = 0;
+
 for (let i = 0; i < transactions.length; i++) {
     if (transactions[i].expenseCategory === targetExpenseCategory) {
         console.log(transactions[i].title + " - " + transactions[i].expenseCategory);
+        expenseCategoryTotal = expenseCategoryTotal + transactions[i].amount;
     }
 }
+console.log("Expense category total: " + expenseCategoryTotal);
