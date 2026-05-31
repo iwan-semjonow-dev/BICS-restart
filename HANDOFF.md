@@ -149,6 +149,8 @@ GitHub is synchronized with `origin/main`.
 - `sumByCategory` calculates totals by BICS behavioral `category`: `Basic`, `Invest`, `Chaos`, `Signal`.
 - `sumByExpenseCategory` calculates totals by practical `expenseCategory`: `housing`, `education`, `food`, `accessories`.
 - The universal function approach was intentionally postponed to keep the code easier to understand.
+- JavaScript function return values checkpoint completed: returned values from `sumByCategory` and `sumByExpenseCategory` are now saved into variables such as `basicTotal` and `housingTotal` before being printed with `console.log`.
+- This confirms the difference between returning a value and printing a value.
 - BICS `category` still remains the behavioral layer: `Basic`, `Invest`, `Chaos`, `Signal`.
 - No DOM, HTML, or CSS changes yet.
 - No technical blockers currently known.

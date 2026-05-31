@@ -100,7 +100,8 @@ function sumByCategory(transactions, targetCategory) {
     }
     return total;
 }
-console.log(sumByCategory(transactions, "Basic"));
+const basicTotal = sumByCategory(transactions, "Basic");
+console.log(basicTotal);
 
 function sumByExpenseCategory(transactions, targetExpenseCategory) {
     let total = 0;
@@ -111,4 +112,5 @@ function sumByExpenseCategory(transactions, targetExpenseCategory) {
     }
     return total;
 }
-console.log(sumByExpenseCategory(transactions, "housing"));
+const housingTotal = sumByExpenseCategory(transactions, "housing");
+console.log(housingTotal);
