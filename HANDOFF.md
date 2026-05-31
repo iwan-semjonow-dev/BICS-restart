@@ -145,6 +145,10 @@ GitHub is synchronized with `origin/main`.
 - This prepares the future expense structure section from the dashboard mockup.
 - Current `script.js` was reviewed top-to-bottom with the user: transaction data, reading fields, filters, counters, totals, `categoryTotal`, and `expenseCategoryTotal` were explained and checked with control questions.
 - User correctly answered the control questions for the current `script.js` logic.
+- JavaScript functions checkpoint completed: `sumByCategory` and `sumByExpenseCategory` were added as two separate beginner-friendly functions.
+- `sumByCategory` calculates totals by BICS behavioral `category`: `Basic`, `Invest`, `Chaos`, `Signal`.
+- `sumByExpenseCategory` calculates totals by practical `expenseCategory`: `housing`, `education`, `food`, `accessories`.
+- The universal function approach was intentionally postponed to keep the code easier to understand.
 - BICS `category` still remains the behavioral layer: `Basic`, `Invest`, `Chaos`, `Signal`.
 - No DOM, HTML, or CSS changes yet.
 - No technical blockers currently known.

@@ -90,3 +90,25 @@ for (let i = 0; i < transactions.length; i++) {
     }
 }
 console.log("Expense category total: " + expenseCategoryTotal);
+
+function sumByCategory(transactions, targetCategory) { 
+    let total = 0;
+    for (let i = 0; i < transactions.length; i++) {
+        if (transactions[i].category === targetCategory){
+            total = total + transactions[i].amount;
+        }
+    }
+    return total;
+}
+console.log(sumByCategory(transactions, "Basic"));
+
+function sumByExpenseCategory(transactions, targetExpenseCategory) {
+    let total = 0;
+    for (let i = 0; i < transactions.length; i++) {
+        if (transactions[i].expenseCategory === targetExpenseCategory) {
+            total = total + transactions[i].amount;
+        }
+    }
+    return total;
+}
+console.log(sumByExpenseCategory(transactions, "housing"));
