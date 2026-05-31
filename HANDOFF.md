@@ -156,6 +156,9 @@ GitHub is synchronized with `origin/main`.
 - This prepares future percentage calculations and dashboard summary logic.
 - JavaScript expense function reuse checkpoint completed: `sumByExpenseCategory` is now reused with different practical expense category arguments such as `food` and `education`.
 - This reinforces the difference between BICS behavioral `category` and practical `expenseCategory`.
+- JavaScript percentage checkpoint completed: `basicPercentage` now calculates the Basic share of `totalAmount` using `basicTotal / totalAmount * 100`.
+- The difference between numeric calculation values and formatted display strings was explained: `basicPercentage` remains a number, while `toFixed(2) + "%"` is used only for readable console output.
+- This prepares future BICS circle, percentage display, and dashboard summary logic.
 - BICS `category` still remains the behavioral layer: `Basic`, `Invest`, `Chaos`, `Signal`.
 - No DOM, HTML, or CSS changes yet.
 - No technical blockers currently known.

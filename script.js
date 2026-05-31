@@ -100,17 +100,30 @@ function sumByCategory(transactions, targetCategory) {
     }
     return total;
 }
+
 const basicTotal = sumByCategory(transactions, "Basic");
 console.log(basicTotal);
+
+const basicPercentage = basicTotal / totalAmount * 100;
+console.log("Basic percentage: " + basicPercentage.toFixed(2) + "%");
 
 const investTotal = sumByCategory(transactions, "Invest");
 console.log(investTotal);
 
+const investPercentage = investTotal / totalAmount * 100;
+console.log("Invest percentage: " + investPercentage.toFixed(2) + "%");
+
 const chaosTotal = sumByCategory(transactions, "Chaos");
 console.log(chaosTotal);
 
+const chaosPercentage = chaosTotal / totalAmount * 100;
+console.log("Chaos percentage: " + chaosPercentage.toFixed(2) + "%");
+
 const signalTotal = sumByCategory(transactions, "Signal");
 console.log(signalTotal);
+
+const signalPercentage = signalTotal / totalAmount * 100;
+console.log("Signal percentage: " + signalPercentage.toFixed(2) + "%");
 
 
 function sumByExpenseCategory(transactions, targetExpenseCategory) {
