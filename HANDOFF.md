@@ -154,6 +154,8 @@ GitHub is synchronized with `origin/main`.
 - JavaScript function reuse checkpoint completed: `sumByCategory` is now reused with different BICS category arguments: `Basic`, `Invest`, `Chaos`, and `Signal`.
 - Returned values are saved into separate variables for each BICS category.
 - This prepares future percentage calculations and dashboard summary logic.
+- JavaScript expense function reuse checkpoint completed: `sumByExpenseCategory` is now reused with different practical expense category arguments such as `food` and `education`.
+- This reinforces the difference between BICS behavioral `category` and practical `expenseCategory`.
 - BICS `category` still remains the behavioral layer: `Basic`, `Invest`, `Chaos`, `Signal`.
 - No DOM, HTML, or CSS changes yet.
 - No technical blockers currently known.

@@ -113,8 +113,6 @@ const signalTotal = sumByCategory(transactions, "Signal");
 console.log(signalTotal);
 
 
-
-
 function sumByExpenseCategory(transactions, targetExpenseCategory) {
     let total = 0;
     for (let i = 0; i < transactions.length; i++) {
@@ -126,3 +124,15 @@ function sumByExpenseCategory(transactions, targetExpenseCategory) {
 }
 const housingTotal = sumByExpenseCategory(transactions, "housing");
 console.log(housingTotal);
+
+const educationTotal = sumByExpenseCategory(transactions, "education");
+console.log(educationTotal);
+
+const foodTotal = sumByExpenseCategory(transactions, "food");
+console.log(foodTotal);
+
+const accessoriesTotal = sumByExpenseCategory(transactions, "accessories");
+console.log(accessoriesTotal);
+
+
+
