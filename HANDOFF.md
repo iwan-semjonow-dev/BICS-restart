@@ -159,6 +159,8 @@ GitHub is synchronized with `origin/main`.
 - JavaScript percentage checkpoint completed: `basicPercentage` now calculates the Basic share of `totalAmount` using `basicTotal / totalAmount * 100`.
 - The difference between numeric calculation values and formatted display strings was explained: `basicPercentage` remains a number, while `toFixed(2) + "%"` is used only for readable console output.
 - This prepares future BICS circle, percentage display, and dashboard summary logic.
+- JavaScript comments checkpoint completed: beginner-friendly Russian block comments were added to `script.js` to explain the main data, reading, calculation, filtering, function, percentage, and expense total blocks.
+- Comments explain the purpose of each block for BICS and do not change JavaScript logic.
 - BICS `category` still remains the behavioral layer: `Basic`, `Invest`, `Chaos`, `Signal`.
 - No DOM, HTML, or CSS changes yet.
 - No technical blockers currently known.

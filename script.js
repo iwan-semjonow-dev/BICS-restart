@@ -1,3 +1,4 @@
+// Тестовые транзакции BICS: каждая покупка хранит текстовую причину, сумму, BICS-категорию и практический тип расхода
 const transactions = [
     {
         title: "Apartment rent", // "Аренда квартиры"
@@ -32,6 +33,7 @@ const transactions = [
     }
 ];
 
+// Проверяем массив и учимся читать отдельные транзакции через индексы и свойства объекта
 console.log(transactions);
 console.log(transactions.length);
 
@@ -47,14 +49,14 @@ console.log(secondTransaction.title);
 console.log(secondTransaction.category);
 console.log(secondTransaction.amount);
 
-
 const lastTransaction = transactions[transactions.length - 1];
 console.log(lastTransaction.category);
 
+// Проверяем, что amount хранится как число и может использоваться в расчётах
 const firstTwoTotal = firstTransaction.amount + secondTransaction.amount;
 console.log(firstTwoTotal);
 
-
+// Считаем статистику по выбранной BICS-категории и общую сумму всех транзакций
 const targetCategory = "Basic";
 console.log("Searching category: " + targetCategory);
 
@@ -75,6 +77,7 @@ console.log("Found: " + count);
 console.log("Total amount: " + totalAmount);
 console.log("Category total: " + categoryTotal);
 
+// Ищем и считаем сумму по практическому типу расхода, а не по BICS-категории
 console.log(firstTransaction.expenseCategory);
 console.log(lastTransaction.expenseCategory);
 
@@ -91,6 +94,7 @@ for (let i = 0; i < transactions.length; i++) {
 }
 console.log("Expense category total: " + expenseCategoryTotal);
 
+// Считаем сумму по BICS-категории и возвращаем число для дальнейших расчётов
 function sumByCategory(transactions, targetCategory) { 
     let total = 0;
     for (let i = 0; i < transactions.length; i++) {
@@ -101,6 +105,7 @@ function sumByCategory(transactions, targetCategory) {
     return total;
 }
 
+// Переиспользуем sumByCategory для всех BICS-категорий, считаем проценты и форматируем вывод для console
 const basicTotal = sumByCategory(transactions, "Basic");
 console.log(basicTotal);
 
@@ -125,7 +130,7 @@ console.log(signalTotal);
 const signalPercentage = signalTotal / totalAmount * 100;
 console.log("Signal percentage: " + signalPercentage.toFixed(2) + "%");
 
-
+// Считаем сумму по expenseCategory: это слой "на что ушли деньги", а не BICS-причина покупки
 function sumByExpenseCategory(transactions, targetExpenseCategory) {
     let total = 0;
     for (let i = 0; i < transactions.length; i++) {
@@ -135,6 +140,8 @@ function sumByExpenseCategory(transactions, targetExpenseCategory) {
     }
     return total;
 }
+
+// Переиспользуем sumByExpenseCategory для разных типов расходов и готовим данные для будущей структуры расходов
 const housingTotal = sumByExpenseCategory(transactions, "housing");
 console.log(housingTotal);
 
