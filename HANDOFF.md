@@ -170,6 +170,10 @@ GitHub is synchronized with `origin/main`.
 - JavaScript `if / else` checkpoint completed: `chaosStats.percentage` is checked with one `if / else` statement in console-first mode.
 - The `if` branch prints `Chaos spending is above 10%` when `chaosStats.percentage` is greater than `10`.
 - The `else` branch prints `Chaos spending is under control` when the `if` condition is false.
+- JavaScript threshold variable checkpoint completed: the Chaos percentage limit is stored in `chaosThreshold` instead of being hard-coded directly inside the condition.
+- The `if / else` condition now compares `chaosStats.percentage` with `chaosThreshold`.
+- The warning message also uses `chaosThreshold`, so the condition and console text share one source of truth.
+- This keeps the analytics logic console-first and prepares future configurable BICS rules without starting DOM, HTML/CSS changes, stats object arrays, dashboard UI, localStorage, React, or backend work.
 - This keeps the small analytics layer based on existing stats objects; DOM, HTML, CSS, stats object arrays, dashboard UI, localStorage, React, and backend work have not started.
 - Console-first mode remains active; DOM, HTML, CSS, stats object arrays, dashboard UI, localStorage, React, and backend work have not started.
 - JavaScript practical expense stats object checkpoint completed: `housingStats`, `educationStats`, `foodStats`, and `accessoriesStats` now keep related practical expense data together: `expenseCategory`, `total`, and `percentage`.

@@ -171,8 +171,10 @@ printStatsSummary(investStats);
 printStatsSummary(chaosStats);
 printStatsSummary(signalStats);
 
-if (chaosStats.percentage > 10) {
-    console.log("Chaos spending is above 10%");
+
+const chaosThreshold = 10;
+if (chaosStats.percentage > chaosThreshold) {
+    console.log("Chaos spending is above " + chaosThreshold + "%");
 } else {
     console.log("Chaos spending is under control");
 }
