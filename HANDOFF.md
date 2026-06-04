@@ -28,7 +28,7 @@ The full dashboard must not be built immediately. Current development should sta
 The current stage is JavaScript data-first and console-first:
 
 - `script.js` contains transaction data.
-- JavaScript practice uses arrays, objects, indexes, variables, loops, conditions, category filtering, and count output.
+- JavaScript practice uses arrays, objects, indexes, variables, loops, conditions, functions, totals, percentages, stats objects, threshold variables, insight functions, and console output.
 - DOM work has not started yet.
 - HTML, CSS, forms, calendar features, localStorage, and dashboard UI logic are out of scope until JavaScript fundamentals are stronger.
 
@@ -195,10 +195,10 @@ GitHub is synchronized with `origin/main`.
 - Comments explain the purpose of each block for BICS and do not change JavaScript logic.
 - HTML comments checkpoint completed: beginner-friendly Russian block comments were added to `index.html` for the main semantic sections: `header`, `summary-section`, `categories-section`, and `transactions-section`.
 - Comments explain the purpose of each section for BICS and do not change HTML structure.
-- No CSS, JavaScript logic, or DOM changes were made.
+- During the HTML comments checkpoint, no CSS, JavaScript logic, or DOM changes were made.
 - CSS comments checkpoint completed: beginner-friendly Russian block comments were added to `styles.css` for the main visual blocks: box sizing, page foundation, header, typography hierarchy, section cards, main layout, summary text, category cards, transaction list, and mobile adaptation.
 - Comments explain the visual purpose of each block for BICS and do not change CSS behavior.
-- No HTML structure, JavaScript logic, or DOM changes were made.
+- During the CSS comments checkpoint, no HTML structure, JavaScript logic, or DOM changes were made.
 - BICS `category` still remains the behavioral layer: `Basic`, `Invest`, `Chaos`, `Signal`.
 - DOM work and dashboard UI have not started; current JavaScript work remains console-first.
 - No technical blockers currently known.
