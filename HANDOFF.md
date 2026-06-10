@@ -174,16 +174,13 @@ GitHub is synchronized with `origin/main`.
 - The `if / else` condition now compares `chaosStats.percentage` with `chaosThreshold`.
 - The warning message also uses `chaosThreshold`, so the condition and console text share one source of truth.
 - This keeps the analytics logic console-first and prepares future configurable BICS rules without starting DOM, HTML/CSS changes, stats object arrays, dashboard UI, localStorage, React, or backend work.
-- Earlier insight checkpoints introduced separate `printChaosInsight(stats, threshold)` and `printSignalInsight(stats, threshold)` functions.
-- JavaScript `printCategoryInsight` checkpoint completed: the duplicated Chaos and Signal insight logic was replaced with one universal `printCategoryInsight(stats, threshold)` function.
-- `printCategoryInsight` checks `stats.percentage` against `threshold` and reads the displayed category name from `stats.category`.
-- The function is called with `chaosStats` and `chaosThreshold`, then reused with `signalStats` and `signalThreshold`.
-- `chaosThreshold` remains `10`, and `signalThreshold` remains `50`.
-- This keeps the insight logic in one place while preserving console-first mode; DOM, HTML/CSS changes, stats object arrays, dashboard UI, localStorage, React, and backend work have not started.
-- JavaScript `if / else if / else` checkpoint completed: `printCategoryInsight(stats, threshold)` now distinguishes percentages above, exactly equal to, and below the provided threshold.
-- The `if` branch checks `stats.percentage > threshold`, the `else if` branch checks `stats.percentage === threshold`, and the final `else` handles values below the threshold.
-- The equality branch reads the category name from `stats.category` and prints that spending is exactly equal to the provided threshold.
-- The existing calls with `chaosStats` and `chaosThreshold`, and with `signalStats` and `signalThreshold`, remain unchanged.
+- Earlier insight checkpoints introduced `printCategoryInsight(stats, threshold)` with direct console output.
+- JavaScript `getCategoryInsight` checkpoint completed: `printCategoryInsight` was renamed to `getCategoryInsight(stats, threshold)`, and each condition branch now returns an insight string instead of printing it directly.
+- `getCategoryInsight` distinguishes percentages above, exactly equal to, and below the provided threshold.
+- `chaosInsight` stores the string returned from `getCategoryInsight(chaosStats, chaosThreshold)`.
+- `signalInsight` stores the string returned from `getCategoryInsight(signalStats, signalThreshold)`.
+- `console.log(chaosInsight)` and `console.log(signalInsight)` handle output separately from the function logic.
+- This separates insight generation from presentation and prepares the returned strings for future use without starting DOM, HTML/CSS changes, stats object arrays, dashboard UI, localStorage, React, or backend work.
 - This keeps the small analytics layer based on existing stats objects; DOM, HTML, CSS, stats object arrays, dashboard UI, localStorage, React, and backend work have not started.
 - Console-first mode remains active; DOM, HTML, CSS, stats object arrays, dashboard UI, localStorage, React, and backend work have not started.
 - JavaScript practical expense stats object checkpoint completed: `housingStats`, `educationStats`, `foodStats`, and `accessoriesStats` now keep related practical expense data together: `expenseCategory`, `total`, and `percentage`.
