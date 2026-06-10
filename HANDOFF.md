@@ -166,6 +166,9 @@ GitHub is synchronized with `origin/main`.
 - When `totalAmount` is `0`, the function uses an early `return 0`, so the percentage formula is not executed.
 - For non-zero totals, the existing `categoryTotal / totalAmount * 100` calculation remains unchanged.
 - This prevents invalid `NaN` or `Infinity` percentage values while preserving console-first mode.
+- JavaScript `formatPercentage` checkpoint completed: `formatPercentage(percentage)` formats a numeric percentage with two decimal places and adds the `%` symbol.
+- `basicPercentage` remains a number, while `formatPercentage(basicPercentage)` returns the display string used by the Basic percentage console output.
+- The formatter is currently applied only to the Basic percentage output as a small learning step; the other percentage outputs remain unchanged.
 - JavaScript stats object checkpoint completed: `basicStats`, `investStats`, `chaosStats`, and `signalStats` now keep related BICS data together: `category`, `total`, and `percentage`.
 - JavaScript object reading checkpoint completed: each BICS stats object is read with dot notation to print a clear console summary, such as category name, total, and percentage of all spending.
 - JavaScript `printStatsSummary` checkpoint completed: `printStatsSummary(stats)` now reads `category`, `total`, and `percentage` from one stats object and prints a clear console summary.

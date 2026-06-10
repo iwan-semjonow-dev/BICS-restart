@@ -112,13 +112,17 @@ function calculatePercentage(categoryTotal, totalAmount) {
     return categoryTotal / totalAmount * 100;
 }
 
+function formatPercentage(percentage) {
+    return percentage.toFixed(2) + "%";
+}
+
 // Переиспользуем sumByCategory для всех BICS-категорий, считаем проценты и форматируем вывод для console
 
 const basicTotal = sumByCategory(transactions, "Basic");
 console.log(basicTotal);
 
 const basicPercentage = calculatePercentage(basicTotal, totalAmount);
-console.log("Basic percentage: " + basicPercentage.toFixed(2) + "%");
+console.log("Basic percentage: " + formatPercentage(basicPercentage));
 
 const basicStats = {
     category: "Basic",
