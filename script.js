@@ -171,7 +171,7 @@ const signalStats = {
 console.log(signalStats);
 
 function printStatsSummary(stats) {
-    console.log(stats.category + ": " + stats.total + " total, " + stats.percentage.toFixed(2) + "% of all spending");
+    console.log(stats.category + ": " + stats.total + " total, " + formatPercentage(stats.percentage) + " of all spending");
 }
 printStatsSummary(basicStats);
 printStatsSummary(investStats);
@@ -261,7 +261,7 @@ const accessoriesStats = {
 console.log(accessoriesStats);
 
 function printExpenseStatsSummary(stats) {
-    console.log(stats.expenseCategory + ": " + stats.total + " total, " + stats.percentage.toFixed(2) + "% of all spending");
+    console.log(stats.expenseCategory + ": " + stats.total + " total, " + formatPercentage(stats.percentage) + " of all spending");
 }
 printExpenseStatsSummary(housingStats);
 printExpenseStatsSummary(educationStats);
