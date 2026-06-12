@@ -206,7 +206,11 @@ GitHub is synchronized with `origin/main`.
 - JavaScript checkpoint `printCategoryComparison` завершён: прямой comparison block был перенесён в `printCategoryComparison(firstStats, secondStats)`.
 - Функция сравнивает `firstStats.percentage` с `secondStats.percentage` и читает названия категорий из `firstStats.category` и `secondStats.category`.
 - Функция сохраняет существующие ветки higher, equal и lower и печатает подходящее console message.
-- `printCategoryComparison` сейчас вызывается один раз с `investStats` и `chaosStats`.
+- JavaScript `printCategoryComparison` branch verification checkpoint completed: the function is now called three times to exercise its higher, lower, and equality branches.
+- `printCategoryComparison(investStats, chaosStats)` exercises the higher branch.
+- `printCategoryComparison(basicStats, signalStats)` exercises the lower branch.
+- `printCategoryComparison(basicStats, basicStats)` exercises the strict equality branch.
+- The function logic remains unchanged; the additional calls confirm that it can compare different pairs of BICS stats objects.
 - Это делает comparison logic переиспользуемой для других пар BICS stats objects, сохраняя console-first режим.
 - Console-first mode remains active; DOM, HTML, CSS, stats object arrays, dashboard UI, localStorage, React, and backend work have not started.
 - JavaScript practical expense stats object checkpoint completed: `housingStats`, `educationStats`, `foodStats`, and `accessoriesStats` now keep related practical expense data together: `expenseCategory`, `total`, and `percentage`.

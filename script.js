@@ -278,3 +278,5 @@ function printCategoryComparison(firstStats, secondStats) {
     }
 }
 printCategoryComparison(investStats, chaosStats);
+printCategoryComparison(basicStats, signalStats);
+printCategoryComparison(basicStats, basicStats);
