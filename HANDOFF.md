@@ -200,6 +200,9 @@ GitHub is synchronized with `origin/main`.
 - The `if` branch handles Invest percentages higher than Chaos, and the `else if` branch handles strict equality.
 - If neither previous condition matches, the final `else` reports that the Invest share is lower than the Chaos share.
 - The comparison uses raw numeric percentage values rather than formatted percentage strings and remains console-first.
+- JavaScript category-based comparison message checkpoint completed: all three Invest vs Chaos comparison messages now read category names from `investStats.category` and `chaosStats.category`.
+- The hard-coded `"Invest"` and `"Chaos"` names were removed from the comparison messages while the numeric comparison logic remains unchanged.
+- This keeps category names tied to their stats objects and preserves console-first mode.
 - Console-first mode remains active; DOM, HTML, CSS, stats object arrays, dashboard UI, localStorage, React, and backend work have not started.
 - JavaScript practical expense stats object checkpoint completed: `housingStats`, `educationStats`, `foodStats`, and `accessoriesStats` now keep related practical expense data together: `expenseCategory`, `total`, and `percentage`.
 - Practical expense stats objects use `expenseCategory` instead of `category` to avoid mixing practical spending types with BICS behavioral categories.

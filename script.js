@@ -269,9 +269,9 @@ printExpenseStatsSummary(foodStats);
 printExpenseStatsSummary(accessoriesStats);
 
 if (investStats.percentage > chaosStats.percentage) {
-    console.log("Invest share is higher than Chaos share");
+    console.log(investStats.category + " share is higher than " + chaosStats.category + " share");
 } else if (investStats.percentage === chaosStats.percentage) {
-    console.log("Invest share is equal to Chaos share");
+    console.log(investStats.category + " share is equal to " + chaosStats.category + " share");
 } else {
-    console.log("Invest share is lower than Chaos share");
+    console.log(investStats.category + " share is lower than " + chaosStats.category + " share");
 }
