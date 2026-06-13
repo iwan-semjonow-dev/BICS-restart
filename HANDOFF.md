@@ -14,12 +14,15 @@ The goal of BICS is to help understand personal spending not only by amount, but
 
 Codex should work as the user's teacher, mentor, and reviewer, not as a replacement for the user's own coding practice. The learning workflow is:
 
-1. Explain the theory first.
-2. Give one small assignment.
-3. Wait for the user's attempt.
-4. Review the attempt.
-5. Explain mistakes and give hints.
-6. Show corrected code only when needed or when the user asks.
+1. Check whether the concept required for the next task is already known.
+2. If the concept is new or weak, explain it briefly.
+3. Show a tiny isolated example if needed.
+4. Give one small assignment.
+5. Wait for the user's attempt.
+6. Review the attempt before suggesting corrections.
+7. Explain mistakes and the concept behind them.
+8. Ask short control questions when useful.
+9. Suggest the next small logical step.
 
 The future visual mockup in `assets/mockups/bics-future-dashboard.jpg` is the long-term product direction only. It shows that BICS may eventually become a dashboard-style web application with summary cards, a BICS circle, financial energy score, transactions, recurring expenses, goals, quick add, charts, filters, and reports.
 
@@ -126,12 +129,20 @@ GitHub is synchronized with `origin/main`.
 - No React, TypeScript, backend, database, or libraries without explanation and permission.
 - Keep category names unchanged: Basic, Invest, Chaos, Signal.
 - Keep tone calm and non-judgmental.
-- Build order: structure first, then style, then logic.
+- For UI layout, use the stage order: `structure → style → behavior`.
+- For JavaScript learning, use the stage order: `data model → calculation logic → console verification → refactoring → DOM/UI later`.
 
 ## Current Status
 
-- GitHub: synchronized with `origin/main` at the last committed checkpoint.
-- Working tree: clean at the last committed checkpoint.
+- Local `main` is synchronized with `origin/main` at commit `78bc07422135d675693e43c150ca7584e6ca941c`.
+- `AGENTS.md` is clean.
+- `README.md` is clean.
+- `script.js` remains modified, unstaged, and uncommitted from a separate earlier task.
+- `script.js` must not be included in documentation-only commits.
+- `AGENTS.md` documentation checkpoint completed: stronger mentoring workflow rules were added, including the Session Start Checklist, Review Format, Weak Points Tracking, Scope Protection Rule, and Terminal and File Safety Rules.
+- Commit `26f3a3b docs: update BICS mentoring workflow rules` was pushed to GitHub.
+- `README.md` documentation checkpoint completed: the file was translated fully to English and now serves as a more public, GitHub-friendly project description.
+- Commit `78bc074 docs: translate README to English` was pushed to GitHub.
 - JavaScript is in data-first and console-first mode; DOM work has not started yet.
 - `script.js` contains transaction data, totals, reusable functions, percentages, BICS stats objects, practical expense stats objects, console summary functions, and conditional analytics logic with early returns.
 - Transaction `title` and `reason` values in `script.js` were translated to English.
