@@ -1,54 +1,84 @@
-﻿# BICS — Financial Energy System
+# BICS — Financial Energy System
 
-BICS — это одностраничное веб-приложение для анализа личных расходов через поведенческую модель.
+BICS is a beginner-friendly portfolio project for a one-page web application that analyzes personal spending through a behavioral model.
 
-Цель BICS — не только видеть, на что уходят деньги, но и понимать, почему совершаются покупки.
+The goal of BICS is not only to show where money goes, but also to help understand why a purchase was made.
 
-## Модель BICS
+## BICS Model
 
-- **Basic** — обязательные базовые расходы.  
-  Пример: аренда квартиры.
+BICS uses four behavioral spending categories:
 
-- **Invest** — развитие, обучение, здоровье, полезные инструменты и активы.  
-  Пример: курс по JavaScript.
+* **Basic** — necessary basic expenses.
+  Example: apartment rent.
 
-- **Chaos** — импульсивные и незапланированные траты.  
-  Пример: спонтанная доставка еды.
+* **Invest** — development, education, health, useful tools, and assets.
+  Example: a JavaScript course.
 
-- **Signal** — покупки для статуса, образа и самопрезентации.  
-  Пример: дорогие часы.
+* **Chaos** — impulsive and unplanned spending.
+  Example: spontaneous food delivery.
 
-## Главная идея
+* **Signal** — status, image, and self-presentation spending.
+  Example: an expensive watch.
 
-В BICS важна не только сама покупка, но и причина покупки.
+## Core Idea
 
-Например, кроссовки могут быть:
-- **Basic**, если старая пара износилась и нужна замена;
-- **Signal**, если покупка сделана ради образа;
-- **Chaos**, если это был спонтанный импульс.
+In BICS, the important part is not only the purchase itself, but also the reason behind the purchase.
 
-## Первый MVP
+For example, sneakers can belong to different categories:
 
-В первой версии проекта будут:
-- header;
-- короткое объяснение модели;
-- 4 категории BICS;
-- список примерных транзакций.
+* **Basic**, if the old pair is worn out and needs to be replaced;
+* **Signal**, if the purchase is made for image or status;
+* **Chaos**, if the purchase is a spontaneous impulse.
 
-## Чего пока не будет
+The same object can have a different behavioral meaning depending on the reason behind it.
 
-На первом HTML/CSS этапе мы не добавляли:
+## First MVP
 
-- форму создания транзакций;
-- цели и сбережения;
-- постоянные расходы;
-- сложный дизайн;
-- DOM-rendering;
-- dashboard UI.
+The first version of the project includes:
 
-Сейчас проект уже перешёл в JavaScript console-first обучение: расчёт сумм и процентов отрабатывается в `script.js`, но пока не выводится в DOM.
+* a header;
+* a short explanation of the BICS model;
+* four BICS categories;
+* a list of example transactions.
 
-## Future product vision
+## Current Status
+
+The project has moved from the first HTML/CSS stage into JavaScript console-first learning.
+
+Current JavaScript work focuses on:
+
+* transaction data;
+* arrays and objects;
+* reading object properties;
+* loops;
+* conditions;
+* functions;
+* totals;
+* percentages;
+* stats objects;
+* console-based analytics logic.
+
+The current calculations are practiced in `script.js`, but they are not rendered to the DOM yet.
+
+## Not Included Yet
+
+The project does not include these features yet:
+
+* transaction creation form;
+* user input;
+* DOM rendering;
+* localStorage;
+* dashboard UI;
+* charts;
+* goals and savings;
+* recurring expenses;
+* backend;
+* database;
+* authentication.
+
+These features may be added later, after the JavaScript foundations are stronger.
+
+## Future Product Vision
 
 In the future, BICS can grow into a dashboard-style web application for understanding personal financial energy and spending behavior.
 
@@ -56,26 +86,54 @@ The mockup in `assets/mockups/bics-future-dashboard.jpg` shows the long-term vis
 
 The future dashboard may include:
 
-- header with the BICS title and subtitle;
-- date range selector;
-- period selector;
-- summary cards for balance, income, expenses, investments, and financial energy;
-- main BICS circle with the four behavioral categories: `Basic`, `Invest`, `Chaos`, and `Signal`;
-- financial energy score;
-- expense structure with regular spending categories, percentages, and amounts;
-- transactions list;
-- recurring expenses;
-- goals and savings;
-- quick add form;
-- charts;
-- filters;
-- reports.
+* header with the BICS title and subtitle;
+* date range selector;
+* period selector;
+* summary cards for balance, income, expenses, investments, and financial energy;
+* main BICS circle with the four behavioral categories: `Basic`, `Invest`, `Chaos`, and `Signal`;
+* financial energy score;
+* expense structure with regular spending categories, percentages, and amounts;
+* transactions list;
+* recurring expenses;
+* goals and savings;
+* quick add form;
+* charts;
+* filters;
+* reports.
 
-Important distinction:
+## Important Distinction
 
-- BICS categories describe the behavioral reason behind spending: `Basic`, `Invest`, `Chaos`, `Signal`.
-- Expense categories describe the practical type of spending, such as food, transport, subscriptions, health, or rent.
+BICS categories describe the behavioral reason behind spending:
 
-Current development still happens through small learning steps. The project should first build strong JavaScript fundamentals: data, arrays, objects, loops, conditions, functions, and console-based logic.
+* `Basic`
+* `Invest`
+* `Chaos`
+* `Signal`
+
+Expense categories describe the practical type of spending, such as:
+
+* food;
+* transport;
+* subscriptions;
+* health;
+* rent;
+* education;
+* accessories.
+
+A BICS category answers the question: **why was the money spent?**
+
+An expense category answers the question: **what type of expense was it?**
+
+## Development Approach
+
+Current development happens through small learning steps.
+
+The project is built with:
+
+* HTML;
+* CSS;
+* JavaScript.
+
+The focus is on learning and understanding the code, not on generating a full application as fast as possible.
 
 The full dashboard should not be built until the JavaScript foundations are ready.
