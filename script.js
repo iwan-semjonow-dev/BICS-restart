@@ -268,15 +268,18 @@ printExpenseStatsSummary(educationStats);
 printExpenseStatsSummary(foodStats);
 printExpenseStatsSummary(accessoriesStats);
 
-function printCategoryComparison(firstStats, secondStats) {
+function getCategoryComparison(firstStats, secondStats) {
     if (firstStats.percentage > secondStats.percentage) {
-        console.log(firstStats.category + " share is higher than " + secondStats.category + " share");
+        return firstStats.category + " share is higher than " + secondStats.category + " share";
     } else if (firstStats.percentage === secondStats.percentage) {
-        console.log(firstStats.category + " share is equal to " + secondStats.category + " share");
+        return firstStats.category + " share is equal to " + secondStats.category + " share";
     } else {
-        console.log(firstStats.category + " share is lower than " + secondStats.category + " share");
+        return firstStats.category + " share is lower than " + secondStats.category + " share";
     }
 }
-printCategoryComparison(investStats, chaosStats);
-printCategoryComparison(basicStats, signalStats);
-printCategoryComparison(basicStats, basicStats);
+const investChaosComparison = getCategoryComparison(investStats, chaosStats);
+console.log(investChaosComparison);
+const basicSignalComparison = getCategoryComparison(basicStats, signalStats);
+console.log(basicSignalComparison);
+const basicBasicComparison = getCategoryComparison(basicStats, basicStats);
+console.log(basicBasicComparison);

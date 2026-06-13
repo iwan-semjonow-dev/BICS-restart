@@ -214,16 +214,14 @@ GitHub is synchronized with `origin/main`.
 - JavaScript category-based comparison message checkpoint completed: all three Invest vs Chaos comparison messages now read category names from `investStats.category` and `chaosStats.category`.
 - The hard-coded `"Invest"` and `"Chaos"` names were removed from the comparison messages while the numeric comparison logic remains unchanged.
 - This keeps category names tied to their stats objects and preserves console-first mode.
-- JavaScript checkpoint `printCategoryComparison` завершён: прямой comparison block был перенесён в `printCategoryComparison(firstStats, secondStats)`.
-- Функция сравнивает `firstStats.percentage` с `secondStats.percentage` и читает названия категорий из `firstStats.category` и `secondStats.category`.
-- Функция сохраняет существующие ветки higher, equal и lower и печатает подходящее console message.
-- JavaScript `printCategoryComparison` branch verification checkpoint completed: the function is now called three times to exercise its higher, lower, and equality branches.
-- `printCategoryComparison(investStats, chaosStats)` exercises the higher branch.
-- `printCategoryComparison(basicStats, signalStats)` exercises the lower branch.
-- `printCategoryComparison(basicStats, basicStats)` exercises the strict equality branch.
-- The function logic remains unchanged; the additional calls confirm that it can compare different pairs of BICS stats objects.
-- Это делает comparison logic переиспользуемой для других пар BICS stats objects, сохраняя console-first режим.
-- Console-first mode remains active; DOM, HTML, CSS, stats object arrays, dashboard UI, localStorage, React, and backend work have not started.
+- An earlier checkpoint introduced `printCategoryComparison(firstStats, secondStats)`, which compared numeric percentages, read category names from the two stats objects, and printed the higher, equal, or lower message directly.
+- The three branches of the earlier direct-output function were verified with `investStats` and `chaosStats`, `basicStats` and `signalStats`, and `basicStats` and `basicStats`.
+- JavaScript `getCategoryComparison` checkpoint completed: `printCategoryComparison(firstStats, secondStats)` was renamed to `getCategoryComparison(firstStats, secondStats)`.
+- `getCategoryComparison` now returns the higher, equal, or lower comparison string instead of printing it directly.
+- `investChaosComparison`, `basicSignalComparison`, and `basicBasicComparison` store the three returned comparison strings.
+- `console.log(investChaosComparison)`, `console.log(basicSignalComparison)`, and `console.log(basicBasicComparison)` handle output separately from the comparison logic.
+- This separates comparison logic from output and keeps the returned strings reusable while preserving console-first mode.
+- DOM, HTML, CSS, stats object arrays, dashboard UI, localStorage, React, and backend work have not started.
 - JavaScript practical expense stats object checkpoint completed: `housingStats`, `educationStats`, `foodStats`, and `accessoriesStats` now keep related practical expense data together: `expenseCategory`, `total`, and `percentage`.
 - Practical expense stats objects use `expenseCategory` instead of `category` to avoid mixing practical spending types with BICS behavioral categories.
 - Practical expense stats objects are read with dot notation to print clear console summaries for housing, education, food, and accessories.
