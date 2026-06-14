@@ -64,6 +64,7 @@ let count = 0;
 let totalAmount = 0;
 let categoryTotal = 0;
 
+// totalAmount обновляется вне if, чтобы учитывать все транзакции, а не только выбранную категорию
 for (let i = 0; i < transactions.length; i++) {
     if (transactions[i].category === targetCategory) {
         console.log(transactions[i].title + " - " + transactions[i].category);
@@ -105,6 +106,7 @@ function sumByCategory(transactions, targetCategory) {
     return total;
 }
 
+// Считаем процент и защищаем расчёт от деления на ноль
 function calculatePercentage(categoryTotal, totalAmount) {
     if (totalAmount === 0) {
         return 0;
@@ -112,6 +114,7 @@ function calculatePercentage(categoryTotal, totalAmount) {
     return categoryTotal / totalAmount * 100;
 }
 
+// Превращаем числовой процент в строку только для вывода
 function formatPercentage(percentage) {
     return percentage.toFixed(2) + "%";
 }
@@ -124,6 +127,7 @@ console.log(basicTotal);
 const basicPercentage = calculatePercentage(basicTotal, totalAmount);
 console.log("Basic percentage: " + formatPercentage(basicPercentage));
 
+// Stats-объект объединяет название категории, сумму и процент
 const basicStats = {
     category: "Basic",
     total: basicTotal,
@@ -170,6 +174,7 @@ const signalStats = {
 };
 console.log(signalStats);
 
+// Выводим сводку в console; функция не возвращает строку для повторного использования
 function printStatsSummary(stats) {
     console.log(stats.category + ": " + stats.total + " total, " + formatPercentage(stats.percentage) + " of all spending");
 }
@@ -181,6 +186,7 @@ printStatsSummary(signalStats);
 const chaosThreshold = 10;
 const signalThreshold = 50;
 
+// Возвращаем строку с аналитическим выводом; её печать выполняется отдельно
 function getCategoryInsight(stats, threshold) {
     if (stats.percentage > threshold) {
         return stats.category + " spending is above " + threshold + "%";
@@ -268,6 +274,7 @@ printExpenseStatsSummary(educationStats);
 printExpenseStatsSummary(foodStats);
 printExpenseStatsSummary(accessoriesStats);
 
+// Сравниваем исходные числовые проценты двух stats-объектов и возвращаем сообщение
 function getCategoryComparison(firstStats, secondStats) {
     if (firstStats.percentage > secondStats.percentage) {
         return firstStats.category + " share is higher than " + secondStats.category + " share";
