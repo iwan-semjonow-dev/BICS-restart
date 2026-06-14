@@ -260,11 +260,11 @@ printExpenseStatsSummary(accessoriesStats);
 function getCategoryComparison(firstStats, secondStats) {
     if (firstStats.percentage > secondStats.percentage) {
         return firstStats.category + " share is higher than " + secondStats.category + " share";
-    } else if (firstStats.percentage === secondStats.percentage) {
-        return firstStats.category + " share is equal to " + secondStats.category + " share";
-    } else {
-        return firstStats.category + " share is lower than " + secondStats.category + " share";
     }
+    if (firstStats.percentage === secondStats.percentage) {
+        return firstStats.category + " share is equal to " + secondStats.category + " share";
+    }
+    return firstStats.category + " share is lower than " + secondStats.category + " share";
 }
 const investChaosComparison = getCategoryComparison(investStats, chaosStats);
 console.log(investChaosComparison);

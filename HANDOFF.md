@@ -221,6 +221,11 @@ GitHub is synchronized with `origin/main`.
 - `investChaosComparison`, `basicSignalComparison`, and `basicBasicComparison` store the three returned comparison strings.
 - `console.log(investChaosComparison)`, `console.log(basicSignalComparison)`, and `console.log(basicBasicComparison)` handle output separately from the comparison logic.
 - This separates comparison logic from output and keeps the returned strings reusable while preserving console-first mode.
+- JavaScript `getCategoryComparison` early return checkpoint completed: the function now uses two separate `if` statements followed by a final fallback `return`.
+- The first `if` handles the higher branch, the second `if` handles strict equality, and the final `return` handles the lower branch.
+- `else if` and `else` were removed because a matching `return` immediately stops the function; this makes `getCategoryComparison` consistent with `getCategoryInsight`.
+- Verification passed: `node --check script.js`, `node script.js`, and `git diff --check` confirmed valid syntax, all three comparison branches, and clean whitespace.
+- `script.explained.js` remains a local-only learning file and is ignored through `.git/info/exclude`; it must not be committed or pushed.
 - DOM, HTML, CSS, stats object arrays, dashboard UI, localStorage, React, and backend work have not started.
 - JavaScript practical expense stats object checkpoint completed: `housingStats`, `educationStats`, `foodStats`, and `accessoriesStats` now keep related practical expense data together: `expenseCategory`, `total`, and `percentage`.
 - Practical expense stats objects use `expenseCategory` instead of `category` to avoid mixing practical spending types with BICS behavioral categories.
