@@ -152,8 +152,7 @@ console.log("Signal percentage: " + formatPercentage(signalPercentage));
 const signalStats = createCategoryStats("Signal", signalTotal, signalPercentage);
 console.log(signalStats);
 
-function printStatsSummary(stats) {
-    const { category, total, percentage } = stats;
+function printStatsSummary({ category, total, percentage }) {
     console.log(category + ": " + total + " total, " + formatPercentage(percentage) + " of all spending");
 }
 printStatsSummary(basicStats);
@@ -232,8 +231,7 @@ console.log("Accessories percentage: " + formatPercentage(accessoriesPercentage)
 const accessoriesStats = createExpenseStats("accessories", accessoriesTotal, accessoriesPercentage);
 console.log(accessoriesStats);
 
-function printExpenseStatsSummary(stats) {
-    const { expenseCategory, total, percentage } = stats;
+function printExpenseStatsSummary({ expenseCategory, total, percentage }) {
     console.log(expenseCategory + ": " + total + " total, " + formatPercentage(percentage) + " of all spending");
 }
 printExpenseStatsSummary(housingStats);

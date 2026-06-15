@@ -249,6 +249,10 @@ GitHub is synchronized with `origin/main`.
 - `printExpenseStatsSummary(stats)` now destructures `expenseCategory`, `total`, and `percentage` from `stats`.
 - Destructuring copies the property values into local variables and does not modify the original stats objects.
 - Both summary functions keep the same console output while the project remains data-first and console-first; DOM, HTML/CSS changes, localStorage, React, and backend work have not started.
+- JavaScript parameter destructuring checkpoint completed: `printStatsSummary({ category, total, percentage })` now destructures the BICS stats properties directly in the function parameter.
+- `printExpenseStatsSummary({ expenseCategory, total, percentage })` now destructures the practical expense stats properties directly in the function parameter.
+- The previous local destructuring lines inside both function bodies were removed; the original stats objects are still not modified.
+- Console output remains unchanged, and the project remains data-first and console-first.
 - JavaScript comments checkpoint completed: beginner-friendly Russian block comments were added to `script.js` to explain the main data, reading, calculation, filtering, function, percentage, and expense total blocks.
 - Comments explain the purpose of each block for BICS and do not change JavaScript logic.
 - HTML comments checkpoint completed: beginner-friendly Russian block comments were added to `index.html` for the main semantic sections: `header`, `summary-section`, `categories-section`, and `transactions-section`.
