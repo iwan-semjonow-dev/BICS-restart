@@ -134,9 +134,9 @@ GitHub is synchronized with `origin/main`.
 
 ## Current Status
 
-- Local `main` is synchronized with `origin/main` at commit `beddf61`.
+- Local `main` is synchronized with `origin/main` at commit `97503dd`.
 - Working tree is clean.
-- Latest pushed commit: `beddf61 docs: update handoff current git state`.
+- Latest pushed commit: `97503dd docs: sync handoff current state`.
 - Latest coding checkpoint: `a5acfdb refactor: destructure category insight parameters`.
 - `AGENTS.md`, `README.md`, `HANDOFF.md`, `script.js`, `index.html`, and `styles.css` are clean.
 - `script.explained.js` remains local-only and ignored through `.git/info/exclude`; it may be stale compared with the current `script.js` and should not be treated as source of truth.
