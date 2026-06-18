@@ -257,3 +257,15 @@ const basicSignalComparison = getCategoryComparison(basicStats, signalStats);
 console.log(basicSignalComparison);
 const basicBasicComparison = getCategoryComparison(basicStats, basicStats);
 console.log(basicBasicComparison);
+
+let currentLeader = basicStats;
+if (investStats.percentage > currentLeader.percentage) {
+    currentLeader = investStats;
+}
+if (chaosStats.percentage > currentLeader.percentage) {
+    currentLeader = chaosStats;
+}
+if (signalStats.percentage > currentLeader.percentage) {
+    currentLeader = signalStats;
+}
+console.log(currentLeader.category + " is the strongest BICS category with " + formatPercentage(currentLeader.percentage));
