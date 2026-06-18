@@ -239,14 +239,17 @@ printExpenseStatsSummary(educationStats);
 printExpenseStatsSummary(foodStats);
 printExpenseStatsSummary(accessoriesStats);
 
-function getCategoryComparison(firstStats, secondStats) {
-    if (firstStats.percentage > secondStats.percentage) {
-        return firstStats.category + " share is higher than " + secondStats.category + " share";
+function getCategoryComparison(
+    { category: firstCategory, percentage: firstPercentage },
+    { category: secondCategory, percentage: secondPercentage }
+) {
+    if (firstPercentage > secondPercentage) {
+        return firstCategory + " share is higher than " + secondCategory + " share";
     }
-    if (firstStats.percentage === secondStats.percentage) {
-        return firstStats.category + " share is equal to " + secondStats.category + " share";
+    if (firstPercentage === secondPercentage) {
+        return firstCategory + " share is equal to " + secondCategory + " share";
     }
-    return firstStats.category + " share is lower than " + secondStats.category + " share";
+    return firstCategory + " share is lower than " + secondCategory + " share";
 }
 const investChaosComparison = getCategoryComparison(investStats, chaosStats);
 console.log(investChaosComparison);

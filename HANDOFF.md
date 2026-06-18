@@ -258,6 +258,13 @@ GitHub is synchronized with `origin/main`.
 - Inside `getCategoryInsight`, conditions use `percentage` instead of `stats.percentage`, and messages use `category` instead of `stats.category`.
 - Existing calls with `chaosStats` and `chaosThreshold`, and with `signalStats` and `signalThreshold`, remain unchanged.
 - Console output remains unchanged, and no DOM, HTML/CSS, localStorage, React, backend, UI, dashboard, forms, or new scope was started.
+- JavaScript `getCategoryComparison` parameter destructuring with aliases checkpoint completed: the function now destructures both stats objects directly in its parameters.
+- The first stats object maps `category` to `firstCategory` and `percentage` to `firstPercentage`.
+- The second stats object maps `category` to `secondCategory` and `percentage` to `secondPercentage`.
+- Aliases are needed because both stats objects use the same property names: `category` and `percentage`; `firstCategory`, `firstPercentage`, `secondCategory`, and `secondPercentage` avoid variable name conflicts.
+- The function body now uses `firstPercentage`, `secondPercentage`, `firstCategory`, and `secondCategory` instead of `firstStats.percentage`, `secondStats.percentage`, `firstStats.category`, and `secondStats.category`.
+- Function calls, transaction data, BICS categories, calculations, and console output remained unchanged.
+- Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
 - HTML comments checkpoint completed: beginner-friendly Russian block comments were added to `index.html` for the main semantic sections: `header`, `summary-section`, `categories-section`, and `transactions-section`.
 - Comments explain the purpose of each section for BICS and do not change HTML structure.
 - During the HTML comments checkpoint, no CSS, JavaScript logic, or DOM changes were made.
