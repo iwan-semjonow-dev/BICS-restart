@@ -281,3 +281,6 @@ if (signalStats.percentage < currentWeakest.percentage) {
     currentWeakest = signalStats;
 }
 console.log(currentWeakest.category + " is the weakest BICS category with " + formatPercentage(currentWeakest.percentage));
+
+const bicsSpread = currentLeader.percentage - currentWeakest.percentage;
+console.log("BICS spread is " + formatPercentage(bicsSpread));
