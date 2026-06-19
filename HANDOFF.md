@@ -309,6 +309,14 @@ GitHub is synchronized with `origin/main`.
 - The `bicsSpreadThreshold` value, `bicsSpread > bicsSpreadThreshold` condition, and `else` branch were not changed; the `else` branch still outputs `BICS spending is more balanced`.
 - This checkpoint belongs to BICS analytics logic and remains data-first and console-first; DOM, HTML/CSS, localStorage, React, backend, dashboard, forms, charts, UI logic, and new scope were not started.
 - Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
+- JavaScript moderate BICS spread concentration branch checkpoint completed: the insight logic now uses three concentration ranges.
+- `bicsSpreadModerateThreshold` stores the numeric threshold value `25`.
+- A `bicsSpread` value greater than `50` indicates high concentration, a value greater than `25` and less than or equal to `50` indicates moderate concentration, and a value less than or equal to `25` indicates more balanced spending.
+- The moderate branch outputs `BICS spending has moderate concentration`.
+- Because `else if` is checked only after the high-concentration condition fails, the moderate branch only needs to compare `bicsSpread` with `bicsSpreadModerateThreshold`.
+- With the current data, `bicsSpread` is `79.78%`, so the high-concentration branch still runs; the moderate branch was structurally verified but was not reached by the current data.
+- This checkpoint belongs to BICS analytics logic and remains data-first and console-first; DOM, HTML/CSS, localStorage, React, backend, dashboard, forms, charts, UI logic, and new scope were not started.
+- Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
 - HTML comments checkpoint completed: beginner-friendly Russian block comments were added to `index.html` for the main semantic sections: `header`, `summary-section`, `categories-section`, and `transactions-section`.
 - Comments explain the purpose of each section for BICS and do not change HTML structure.
 - During the HTML comments checkpoint, no CSS, JavaScript logic, or DOM changes were made.
