@@ -288,7 +288,7 @@ console.log("BICS spread is " + formatPercentage(bicsSpread));
 const bicsSpreadThreshold = 50;
 
 if (bicsSpread > bicsSpreadThreshold) {
-    console.log("BICS spending is highly concentrated in " + currentLeader.category);
+    console.log("BICS spending is highly concentrated in " + currentLeader.category + " at " + formatPercentage(currentLeader.percentage));
 } else {
     console.log("BICS spending is more balanced");
 }

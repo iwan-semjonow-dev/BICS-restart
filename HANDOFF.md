@@ -302,6 +302,13 @@ GitHub is synchronized with `origin/main`.
 - The `bicsSpreadThreshold` value, `bicsSpread > bicsSpreadThreshold` condition, and `else` branch were not changed; the `else` branch still outputs `BICS spending is more balanced`.
 - This checkpoint belongs to BICS analytics logic and remains data-first and console-first; DOM, HTML/CSS, localStorage, React, backend, dashboard, forms, charts, UI logic, and new scope were not started.
 - Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
+- JavaScript high-concentration insight with dominant BICS category percentage checkpoint completed: the `if` branch now includes both `currentLeader.category` and `formatPercentage(currentLeader.percentage)`.
+- `currentLeader.category` provides the dynamic dominant category name, while `currentLeader.percentage` remains a numeric value.
+- The numeric percentage is formatted only when preparing console output, so the raw value remains available for future calculations and comparisons.
+- With the current data, the new console output is `BICS spending is highly concentrated in Signal at 80.26%`.
+- The `bicsSpreadThreshold` value, `bicsSpread > bicsSpreadThreshold` condition, and `else` branch were not changed; the `else` branch still outputs `BICS spending is more balanced`.
+- This checkpoint belongs to BICS analytics logic and remains data-first and console-first; DOM, HTML/CSS, localStorage, React, backend, dashboard, forms, charts, UI logic, and new scope were not started.
+- Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
 - HTML comments checkpoint completed: beginner-friendly Russian block comments were added to `index.html` for the main semantic sections: `header`, `summary-section`, `categories-section`, and `transactions-section`.
 - Comments explain the purpose of each section for BICS and do not change HTML structure.
 - During the HTML comments checkpoint, no CSS, JavaScript logic, or DOM changes were made.
