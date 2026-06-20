@@ -260,6 +260,13 @@ console.log(basicBasicComparison);
 
 const investChaosDifference = investStats.percentage - chaosStats.percentage;
 console.log("Invest vs Chaos difference: " + formatPercentage(investChaosDifference));
+if (investChaosDifference > 0) {
+    console.log("Invest share is higher than Chaos by " + formatPercentage(investChaosDifference));
+} else if (investChaosDifference < 0) {
+    console.log("Chaos share is higher than Invest by " + formatPercentage(Math.abs(investChaosDifference)));
+} else {
+    console.log("Invest and Chaos shares are equal");
+}
 
 let currentLeader = basicStats;
 if (investStats.percentage > currentLeader.percentage) {
