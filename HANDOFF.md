@@ -324,6 +324,14 @@ GitHub is synchronized with `origin/main`.
 - The thresholds, high-concentration branch, and balanced `else` branch were not changed.
 - This checkpoint belongs to BICS analytics logic and remains data-first and console-first; DOM, HTML/CSS, localStorage, React, backend, dashboard, forms, charts, UI logic, and new scope were not started.
 - Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
+- JavaScript Invest vs Chaos numeric difference checkpoint completed: `investChaosDifference` is calculated as `investStats.percentage - chaosStats.percentage`.
+- `investChaosDifference` remains numeric, and `formatPercentage` is used only when preparing the console output.
+- The new output is `Invest vs Chaos difference: 5.94%`.
+- A positive value means the Invest percentage is higher than the Chaos percentage, a negative value means Chaos is higher than Invest, and zero means both percentages are equal.
+- `getCategoryComparison` explains the comparison direction with text, while `investChaosDifference` shows the numeric size of the gap.
+- This checkpoint does not add a sign-based text insight yet; the numeric difference can later support threshold-based insights, balance analysis, financial energy scoring, or period comparisons.
+- This checkpoint belongs to BICS analytics logic and remains data-first and console-first; DOM, HTML/CSS, localStorage, React, backend, dashboard, forms, charts, UI logic, and new scope were not started.
+- Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
 - HTML comments checkpoint completed: beginner-friendly Russian block comments were added to `index.html` for the main semantic sections: `header`, `summary-section`, `categories-section`, and `transactions-section`.
 - Comments explain the purpose of each section for BICS and do not change HTML structure.
 - During the HTML comments checkpoint, no CSS, JavaScript logic, or DOM changes were made.

@@ -258,6 +258,9 @@ console.log(basicSignalComparison);
 const basicBasicComparison = getCategoryComparison(basicStats, basicStats);
 console.log(basicBasicComparison);
 
+const investChaosDifference = investStats.percentage - chaosStats.percentage;
+console.log("Invest vs Chaos difference: " + formatPercentage(investChaosDifference));
+
 let currentLeader = basicStats;
 if (investStats.percentage > currentLeader.percentage) {
     currentLeader = investStats;
