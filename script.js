@@ -281,6 +281,13 @@ if (investChaosDifference < 0 && (Math.abs(investChaosDifference) > investChaosD
 
 const investChaosAmountDifference = investStats.total - chaosStats.total;
 console.log("Invest vs Chaos amount difference: " + investChaosAmountDifference);
+if (investChaosAmountDifference > 0) {
+    console.log("Invest total is higher than Chaos by " + Math.abs(investChaosAmountDifference));
+} else if (investChaosAmountDifference < 0) {
+    console.log("Chaos total is higher than Invest by " + Math.abs(investChaosAmountDifference));
+} else {
+    console.log("Invest and Chaos totals are equal");
+}
 
 let currentLeader = basicStats;
 if (investStats.percentage > currentLeader.percentage) {
