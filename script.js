@@ -275,6 +275,10 @@ if (Math.abs(investChaosDifference) > investChaosDifferenceThreshold) {
     console.log("Invest and Chaos shares are close");
 }
 
+if (investChaosDifference < 0 && (Math.abs(investChaosDifference) > investChaosDifferenceThreshold)) {
+    console.log("Chaos share is noticeably higher than Invest");
+}
+
 let currentLeader = basicStats;
 if (investStats.percentage > currentLeader.percentage) {
     currentLeader = investStats;
