@@ -371,6 +371,15 @@ GitHub is synchronized with `origin/main`.
 - This amount insight compares real money totals, while the earlier `investChaosDifference` sign-based insight compares percentage structure.
 - This checkpoint belongs to BICS analytics logic and remains data-first and console-first; DOM, HTML/CSS, localStorage, React, backend, dashboard, forms, charts, UI logic, and new scope were not started.
 - Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
+- JavaScript Invest vs Chaos amount gap threshold insight checkpoint completed: `investChaosAmountDifferenceThreshold` stores the numeric learning threshold value `300`.
+- The logic compares `Math.abs(investChaosAmountDifference)` with the threshold without mutating the original numeric amount difference.
+- An absolute amount difference greater than `300` outputs `Invest and Chaos totals have a noticeable amount gap`; otherwise, it outputs `Invest and Chaos totals are close in amount`.
+- With the current data, the absolute amount difference is `370`, so `370 > 300` triggers the noticeable amount gap branch.
+- A difference exactly equal to `300` reaches the `else` branch because the condition uses `>`, not `>=`.
+- The percentage threshold evaluates spending structure, while this amount threshold evaluates the real money size of the gap; `formatPercentage` is not used because the value is an amount rather than a percentage.
+- The threshold value `300` is currently a learning rule, not a final scientifically validated BICS rule.
+- This checkpoint belongs to BICS analytics logic and remains data-first and console-first; DOM, HTML/CSS, localStorage, React, backend, dashboard, forms, charts, UI logic, and new scope were not started.
+- Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
 - HTML comments checkpoint completed: beginner-friendly Russian block comments were added to `index.html` for the main semantic sections: `header`, `summary-section`, `categories-section`, and `transactions-section`.
 - Comments explain the purpose of each section for BICS and do not change HTML structure.
 - During the HTML comments checkpoint, no CSS, JavaScript logic, or DOM changes were made.

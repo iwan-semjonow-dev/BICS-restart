@@ -289,6 +289,13 @@ if (investChaosAmountDifference > 0) {
     console.log("Invest and Chaos totals are equal");
 }
 
+const investChaosAmountDifferenceThreshold = 300;
+if (Math.abs(investChaosAmountDifference) > investChaosAmountDifferenceThreshold) {
+    console.log("Invest and Chaos totals have a noticeable amount gap");
+} else {
+    console.log("Invest and Chaos totals are close in amount");
+}
+
 let currentLeader = basicStats;
 if (investStats.percentage > currentLeader.percentage) {
     currentLeader = investStats;
