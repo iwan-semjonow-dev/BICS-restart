@@ -343,3 +343,15 @@ if (bicsSpread > bicsSpreadThreshold) {
 } else {
     console.log("BICS spending is more balanced");
 }
+
+let currentExpenseLeader = housingStats;
+if (educationStats.percentage > currentExpenseLeader.percentage) {
+    currentExpenseLeader = educationStats;
+}
+if (foodStats.percentage > currentExpenseLeader.percentage) {
+    currentExpenseLeader = foodStats;
+}
+if (accessoriesStats.percentage > currentExpenseLeader.percentage) {
+    currentExpenseLeader = accessoriesStats;
+}
+console.log(currentExpenseLeader.expenseCategory + " is the largest expense category with " + formatPercentage(currentExpenseLeader.percentage));

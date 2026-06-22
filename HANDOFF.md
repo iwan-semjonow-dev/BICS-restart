@@ -288,6 +288,13 @@ GitHub is synchronized with `origin/main`.
 - This concentration insight compares the strongest category with the rest of the BICS structure using amounts rather than percentages, so `formatPercentage` is not used.
 - This checkpoint belongs to BICS analytics logic and remains data-first and console-first; DOM, HTML/CSS, localStorage, React, backend, dashboard, forms, charts, UI logic, and new scope were not started.
 - Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
+- JavaScript practical expense category leader checkpoint completed: `currentExpenseLeader` starts as `housingStats` and is declared with `let` because the variable may be reassigned to a different stats object.
+- `educationStats`, `foodStats`, and `accessoriesStats` are compared with `currentExpenseLeader` by numeric `.percentage`; when a higher percentage is found, the whole stats object is assigned to `currentExpenseLeader`.
+- Keeping the whole object preserves access to `.expenseCategory`, `.total`, and `.percentage`; assigning `currentExpenseLeader = accessoriesStats` changes the reference and makes both variables point to the same object rather than copying or mutating that object.
+- `currentLeader` finds the strongest behavioral BICS category, while `currentExpenseLeader` finds the practical expense category with the largest share.
+- With the current data, the output is `accessories is the largest expense category with 80.26%`; `formatPercentage(currentExpenseLeader.percentage)` is used because the displayed value is a percentage.
+- This checkpoint belongs to BICS analytics logic and remains data-first and console-first; DOM, HTML/CSS, localStorage, React, backend, dashboard, forms, charts, UI logic, and new scope were not started.
+- Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
 - JavaScript weakest BICS category console-first analytics checkpoint completed: a new block finds the BICS category with the lowest percentage.
 - `currentWeakest` starts as `basicStats`, then `investStats.percentage`, `chaosStats.percentage`, and `signalStats.percentage` are compared with `currentWeakest.percentage`.
 - When a category has a lower percentage, `currentWeakest` is updated to the whole stats object, not only to the percentage number.
