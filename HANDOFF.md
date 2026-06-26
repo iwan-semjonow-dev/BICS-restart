@@ -303,6 +303,13 @@ GitHub is synchronized with `origin/main`.
 - `currentExpenseWeakest` mirrors `currentExpenseLeader`: the leader logic uses `>` to find the largest practical expense share, and the weakest logic uses `<` to find the smallest practical expense share.
 - This checkpoint belongs to BICS analytics logic and remains data-first and console-first; DOM, HTML/CSS, localStorage, React, backend, dashboard, forms, charts, UI logic, and new scope were not started.
 - Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
+- JavaScript practical expense category spread checkpoint completed: numeric `expenseSpread` is calculated as `currentExpenseLeader.percentage - currentExpenseWeakest.percentage`.
+- `currentExpenseLeader` provides the largest practical expense category, and `currentExpenseWeakest` provides the smallest practical expense category.
+- `expenseSpread` remains numeric, and `const` is correct because the value is calculated once and not reassigned.
+- `formatPercentage(expenseSpread)` is used only when preparing console output; with the current data, the output is `Expense spread is 79.78%`.
+- This mirrors the existing `bicsSpread` logic, but `bicsSpread` works with behavioral BICS categories while `expenseSpread` works with practical expense categories.
+- This checkpoint belongs to BICS analytics logic and remains data-first and console-first; DOM, HTML/CSS, localStorage, React, backend, dashboard, forms, charts, UI logic, and new scope were not started.
+- Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
 - JavaScript weakest BICS category console-first analytics checkpoint completed: a new block finds the BICS category with the lowest percentage.
 - `currentWeakest` starts as `basicStats`, then `investStats.percentage`, `chaosStats.percentage`, and `signalStats.percentage` are compared with `currentWeakest.percentage`.
 - When a category has a lower percentage, `currentWeakest` is updated to the whole stats object, not only to the percentage number.

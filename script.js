@@ -367,3 +367,6 @@ if (accessoriesStats.percentage < currentExpenseWeakest.percentage) {
     currentExpenseWeakest = accessoriesStats;
 }
 console.log(currentExpenseWeakest.expenseCategory + " is the smallest expense category with " + formatPercentage(currentExpenseWeakest.percentage));
+
+const expenseSpread = currentExpenseLeader.percentage - currentExpenseWeakest.percentage;
+console.log("Expense spread is " + formatPercentage(expenseSpread));
