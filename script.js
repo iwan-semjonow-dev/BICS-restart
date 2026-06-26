@@ -355,3 +355,15 @@ if (accessoriesStats.percentage > currentExpenseLeader.percentage) {
     currentExpenseLeader = accessoriesStats;
 }
 console.log(currentExpenseLeader.expenseCategory + " is the largest expense category with " + formatPercentage(currentExpenseLeader.percentage));
+
+let currentExpenseWeakest = housingStats;
+if (educationStats.percentage < currentExpenseWeakest.percentage) {
+    currentExpenseWeakest = educationStats;
+}
+if (foodStats.percentage < currentExpenseWeakest.percentage) {
+    currentExpenseWeakest = foodStats;
+}
+if (accessoriesStats.percentage < currentExpenseWeakest.percentage) {
+    currentExpenseWeakest = accessoriesStats;
+}
+console.log(currentExpenseWeakest.expenseCategory + " is the smallest expense category with " + formatPercentage(currentExpenseWeakest.percentage));
