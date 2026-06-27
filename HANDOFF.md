@@ -195,6 +195,15 @@ GitHub is synchronized with `origin/main`.
 - JavaScript `printStatsSummary` checkpoint completed: `printStatsSummary(stats)` now reads `category`, `total`, and `percentage` from one stats object and prints a clear console summary.
 - `printStatsSummary` is manually reused for all four BICS stats objects: `basicStats`, `investStats`, `chaosStats`, and `signalStats`.
 - Old manual summary `console.log` lines for each BICS stats object were removed, so the summary format now lives in one function.
+- JavaScript `bicsStatsList` refactor-lite checkpoint completed: `bicsStatsList` stores the existing BICS stats objects directly: `basicStats`, `investStats`, `chaosStats`, and `signalStats`.
+- `basicStats` is already an object, so it is placed into the array directly; `{ basicStats }` would create a new wrapper object with a `basicStats` property.
+- This reinforces the difference between array brackets `[ ]` and object braces `{ }`: `[ ]` creates an array, while `{ }` creates an object.
+- `bicsStatsList` is declared with `const` because the variable is not reassigned.
+- The new console output prints an array of the four BICS stats objects, including Basic, Invest, Chaos, and Signal with their `category`, `total`, and `percentage` values.
+- This is a refactor-lite bridge from repeated manual `if` blocks toward future loop-based logic and reusable algorithms.
+- Existing `currentLeader` and `currentWeakest` logic was not refactored yet, and existing outputs were not changed except for the new `bicsStatsList` console output.
+- DOM, UI, CSS, HTML changes, localStorage, React, backend, dashboard, charts, forms, and new scope were not started.
+- Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
 - JavaScript `if / else` checkpoint completed: `chaosStats.percentage` is checked with one `if / else` statement in console-first mode.
 - The `if` branch prints `Chaos spending is above 10%` when `chaosStats.percentage` is greater than `10`.
 - The `else` branch prints `Chaos spending is under control` when the `if` condition is false.

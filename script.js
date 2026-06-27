@@ -160,6 +160,14 @@ printStatsSummary(investStats);
 printStatsSummary(chaosStats);
 printStatsSummary(signalStats);
 
+const bicsStatsList = [
+    basicStats,
+    investStats,
+    chaosStats,
+    signalStats
+];
+console.log(bicsStatsList);
+
 const chaosThreshold = 10;
 const signalThreshold = 50;
 
