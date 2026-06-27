@@ -204,6 +204,16 @@ GitHub is synchronized with `origin/main`.
 - Existing `currentLeader` and `currentWeakest` logic was not refactored yet, and existing outputs were not changed except for the new `bicsStatsList` console output.
 - DOM, UI, CSS, HTML changes, localStorage, React, backend, dashboard, charts, forms, and new scope were not started.
 - Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
+- JavaScript `printStatsSummary` loop checkpoint completed: four manual `printStatsSummary(...)` calls were replaced by one `for` loop over `bicsStatsList`.
+- The removed manual calls were `printStatsSummary(basicStats)`, `printStatsSummary(investStats)`, `printStatsSummary(chaosStats)`, and `printStatsSummary(signalStats)`.
+- `bicsStatsList` is now used as a working data structure, not only as a displayed array.
+- Inside the loop, `bicsStatsList[i]` means one stats object from the array, `bicsStatsList.length` controls how many times the loop runs, and `i++` moves the loop to the next item.
+- Each stats object is passed into the same reusable `printStatsSummary(...)` function, reducing repeated manual code.
+- The BICS summary output still appears once and keeps the same meaning: Basic, Invest, Chaos, and Signal totals and percentages are printed in order.
+- `currentLeader` and `currentWeakest` logic was not changed, and no new function was created.
+- This is a refactor-lite step toward loop-based logic while keeping JavaScript data-first and console-first.
+- DOM, UI, CSS, HTML changes, localStorage, React, backend, dashboard, charts, forms, and new scope were not started.
+- Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
 - JavaScript `if / else` checkpoint completed: `chaosStats.percentage` is checked with one `if / else` statement in console-first mode.
 - The `if` branch prints `Chaos spending is above 10%` when `chaosStats.percentage` is greater than `10`.
 - The `else` branch prints `Chaos spending is under control` when the `if` condition is false.

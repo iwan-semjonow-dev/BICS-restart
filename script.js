@@ -155,10 +155,6 @@ console.log(signalStats);
 function printStatsSummary({ category, total, percentage }) {
     console.log(category + ": " + total + " total, " + formatPercentage(percentage) + " of all spending");
 }
-printStatsSummary(basicStats);
-printStatsSummary(investStats);
-printStatsSummary(chaosStats);
-printStatsSummary(signalStats);
 
 const bicsStatsList = [
     basicStats,
@@ -167,6 +163,10 @@ const bicsStatsList = [
     signalStats
 ];
 console.log(bicsStatsList);
+
+for (let i = 0; i < bicsStatsList.length; i++) {
+    printStatsSummary(bicsStatsList[i]);
+}
 
 const chaosThreshold = 10;
 const signalThreshold = 50;
