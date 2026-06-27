@@ -326,6 +326,16 @@ GitHub is synchronized with `origin/main`.
 - This checkpoint belongs to practical expense category analytics and makes the insight more informative by showing the percentage of the largest practical expense category.
 - DOM, UI, CSS, HTML changes, localStorage, React, backend, dashboard, charts, forms, and new scope were not started.
 - Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
+- JavaScript practical expense spread moderate branch checkpoint completed: `expenseSpreadModerateThreshold` stores the numeric threshold value `25`.
+- The `expenseSpread` insight now has three levels: high, moderate, and balanced.
+- The high branch still uses `expenseSpread > expenseSpreadThreshold` and outputs `Expense spread is highly concentrated in <currentExpenseLeader.expenseCategory> at <formatted currentExpenseLeader.percentage>`.
+- The new `else if` branch uses `expenseSpread > expenseSpreadModerateThreshold` and outputs `Expense spread has moderate concentration in <currentExpenseLeader.expenseCategory>`.
+- The existing `else` branch still outputs `Expense spread is more balanced`.
+- With the current data, `expenseSpread` is `79.78%`, so the high branch still runs and the current output is `Expense spread is highly concentrated in accessories at 80.26%`.
+- The moderate branch is present structurally but is not reached by the current data; `currentExpenseLeader.expenseCategory` keeps the category dynamic.
+- This mirrors the three-level structure already used by `bicsSpread` and remains practical expense category analytics.
+- DOM, UI, CSS, HTML changes, localStorage, React, backend, dashboard, charts, forms, and new scope were not started.
+- Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
 - JavaScript weakest BICS category console-first analytics checkpoint completed: a new block finds the BICS category with the lowest percentage.
 - `currentWeakest` starts as `basicStats`, then `investStats.percentage`, `chaosStats.percentage`, and `signalStats.percentage` are compared with `currentWeakest.percentage`.
 - When a category has a lower percentage, `currentWeakest` is updated to the whole stats object, not only to the percentage number.
