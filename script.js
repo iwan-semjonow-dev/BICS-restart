@@ -312,12 +312,18 @@ if (Math.abs(investChaosAmountDifference) > investChaosAmountDifferenceThreshold
     console.log("Invest and Chaos totals are close in amount");
 }
 
-let currentLeader = bicsStatsList[0];
-for (let i = 0; i < bicsStatsList.length; i++) {
-    if (bicsStatsList[i].percentage > currentLeader.percentage) {
-        currentLeader = bicsStatsList[i];
+function findHighestPercentageStats(statsList) {
+    let highestStats = statsList[0];
+
+    for (let i = 0; i < statsList.length; i++) {
+        if (statsList[i].percentage > highestStats.percentage) {
+            highestStats = statsList[i];
+        }
     }
+    return highestStats;
 }
+
+const currentLeader = findHighestPercentageStats(bicsStatsList);
 console.log(currentLeader.category + " is the strongest BICS category with " + formatPercentage(currentLeader.percentage));
 
 const otherCategoriesTotal = totalAmount - currentLeader.total;
@@ -352,12 +358,7 @@ if (bicsSpread > bicsSpreadThreshold) {
     console.log("BICS spending is more balanced");
 }
 
-let currentExpenseLeader = expenseStatsList[0];
-for (let i = 0; i < expenseStatsList.length; i++) {
-    if (expenseStatsList[i].percentage > currentExpenseLeader.percentage) {
-        currentExpenseLeader = expenseStatsList[i];
-    }
-}
+const currentExpenseLeader = findHighestPercentageStats(expenseStatsList);
 console.log(currentExpenseLeader.expenseCategory + " is the largest expense category with " + formatPercentage(currentExpenseLeader.percentage));
 
 let currentExpenseWeakest = expenseStatsList[0];
