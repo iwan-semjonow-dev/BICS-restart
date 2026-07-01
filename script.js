@@ -350,7 +350,11 @@ function findLowestPercentageStats(statsList) {
 const currentWeakest = findLowestPercentageStats(bicsStatsList);
 console.log(currentWeakest.category + " is the weakest BICS category with " + formatPercentage(currentWeakest.percentage));
 
-const bicsSpread = currentLeader.percentage - currentWeakest.percentage;
+function calculateStatsSpread(highestStats, lowestStats) {
+    return highestStats.percentage - lowestStats.percentage;
+}
+
+const bicsSpread = calculateStatsSpread(currentLeader, currentWeakest);
 console.log("BICS spread is " + formatPercentage(bicsSpread));
 
 const bicsSpreadThreshold = 50;
@@ -370,7 +374,7 @@ console.log(currentExpenseLeader.expenseCategory + " is the largest expense cate
 const currentExpenseWeakest = findLowestPercentageStats(expenseStatsList);
 console.log(currentExpenseWeakest.expenseCategory + " is the smallest expense category with " + formatPercentage(currentExpenseWeakest.percentage));
 
-const expenseSpread = currentExpenseLeader.percentage - currentExpenseWeakest.percentage;
+const expenseSpread = calculateStatsSpread(currentExpenseLeader, currentExpenseWeakest);
 console.log("Expense spread is " + formatPercentage(expenseSpread));
 
 const expenseSpreadThreshold = 50;

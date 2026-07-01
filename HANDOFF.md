@@ -417,6 +417,20 @@ GitHub is synchronized with `origin/main`.
 - This is a refactor-lite step from repeated loop logic to reusable function logic while remaining JavaScript data-first and console-first.
 - DOM, UI, CSS, HTML changes, localStorage, React, backend, dashboard, charts, forms, and new scope were not started.
 - Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
+- JavaScript reusable stats spread function checkpoint completed: repeated spread calculation logic was extracted into `calculateStatsSpread(highestStats, lowestStats)`.
+- The function takes two stats objects as parameters and returns the numeric difference `highestStats.percentage - lowestStats.percentage`.
+- `highestStats` is the object with the higher percentage, while `lowestStats` is the object with the lower percentage.
+- The function uses its parameters instead of external variables such as `currentLeader` or `currentWeakest`, which keeps it reusable.
+- `bicsSpread` now uses `const bicsSpread = calculateStatsSpread(currentLeader, currentWeakest)`, and the current key output remains `BICS spread is 79.78%`.
+- `expenseSpread` now uses `const expenseSpread = calculateStatsSpread(currentExpenseLeader, currentExpenseWeakest)`, and the current key output remains `Expense spread is 79.78%`.
+- The same function works for both BICS stats and practical expense stats because both object types have a numeric `.percentage` property.
+- `return` sends the numeric spread back outside the function; the function does not use `console.log` or `formatPercentage`.
+- Formatting stays outside the function in `console.log`, so calculation and presentation remain separate.
+- `findHighestPercentageStats` and `findLowestPercentageStats` were not changed, and leader/weakest lookup logic was not changed.
+- The final output meaning did not change.
+- This is a refactor-lite step from repeated spread formulas to reusable function logic while remaining JavaScript data-first and console-first.
+- DOM, UI, CSS, HTML changes, localStorage, React, backend, dashboard, charts, forms, and new scope were not started.
+- Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
 - JavaScript practical expense category spread checkpoint completed: numeric `expenseSpread` is calculated as `currentExpenseLeader.percentage - currentExpenseWeakest.percentage`.
 - `currentExpenseLeader` provides the largest practical expense category, and `currentExpenseWeakest` provides the smallest practical expense category.
 - `expenseSpread` remains numeric, and `const` is correct because the value is calculated once and not reassigned.
