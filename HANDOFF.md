@@ -402,6 +402,21 @@ GitHub is synchronized with `origin/main`.
 - This is a refactor-lite step from repeated loop logic to reusable function logic while remaining JavaScript data-first and console-first.
 - DOM, UI, CSS, HTML changes, localStorage, React, backend, dashboard, charts, forms, and new scope were not started.
 - Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
+- JavaScript reusable lowest percentage stats function checkpoint completed: repeated minimum-percentage weakest logic was extracted into `findLowestPercentageStats(statsList)`.
+- The function starts with `let lowestStats = statsList[0]`, loops through `statsList`, compares `statsList[i].percentage` with `lowestStats.percentage` using `<`, updates `lowestStats` when a lower percentage is found, and returns the whole found stats object.
+- `statsList` is a function parameter and a temporary name for whichever array is passed into the function.
+- `currentWeakest` now uses `const currentWeakest = findLowestPercentageStats(bicsStatsList)`, and the current key output remains `Chaos is the weakest BICS category with 0.48%`.
+- `currentExpenseWeakest` now uses `const currentExpenseWeakest = findLowestPercentageStats(expenseStatsList)`, and the current key output remains `food is the smallest expense category with 0.48%`.
+- The same function works for both arrays because both BICS stats objects and practical expense stats objects have a numeric `.percentage` property.
+- The function does not care about `.category` or `.expenseCategory`; those properties are only needed later in `console.log`.
+- BICS output uses `.category`, while practical expense output uses `.expenseCategory`.
+- `lowestStats` stores the whole stats object, not only the percentage, and `return lowestStats` sends that object back outside the function.
+- `findHighestPercentageStats` searches for the maximum percentage with `>`, while `findLowestPercentageStats` searches for the minimum percentage with `<`.
+- `currentWeakest` and `currentExpenseWeakest` can now be declared with `const` because they are no longer reassigned outside the function.
+- `currentLeader` and `currentExpenseLeader` logic were not changed in this checkpoint, and the final output meaning did not change.
+- This is a refactor-lite step from repeated loop logic to reusable function logic while remaining JavaScript data-first and console-first.
+- DOM, UI, CSS, HTML changes, localStorage, React, backend, dashboard, charts, forms, and new scope were not started.
+- Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
 - JavaScript practical expense category spread checkpoint completed: numeric `expenseSpread` is calculated as `currentExpenseLeader.percentage - currentExpenseWeakest.percentage`.
 - `currentExpenseLeader` provides the largest practical expense category, and `currentExpenseWeakest` provides the smallest practical expense category.
 - `expenseSpread` remains numeric, and `const` is correct because the value is calculated once and not reassigned.

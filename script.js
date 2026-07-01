@@ -336,12 +336,18 @@ if (currentLeader.total > otherCategoriesTotal) {
     console.log(currentLeader.category + " total is lower than all other BICS categories combined");
 }
 
-let currentWeakest = bicsStatsList[0];
-for (let i = 0; i < bicsStatsList.length; i++) {
-    if (bicsStatsList[i].percentage < currentWeakest.percentage) {
-        currentWeakest = bicsStatsList[i];
+function findLowestPercentageStats(statsList) {
+    let lowestStats = statsList[0];
+
+    for (let i = 0; i < statsList.length; i++) {
+        if (statsList[i].percentage < lowestStats.percentage) {
+            lowestStats = statsList[i];
+        }
     }
+    return lowestStats;
 }
+
+const currentWeakest = findLowestPercentageStats(bicsStatsList);
 console.log(currentWeakest.category + " is the weakest BICS category with " + formatPercentage(currentWeakest.percentage));
 
 const bicsSpread = currentLeader.percentage - currentWeakest.percentage;
@@ -361,12 +367,7 @@ if (bicsSpread > bicsSpreadThreshold) {
 const currentExpenseLeader = findHighestPercentageStats(expenseStatsList);
 console.log(currentExpenseLeader.expenseCategory + " is the largest expense category with " + formatPercentage(currentExpenseLeader.percentage));
 
-let currentExpenseWeakest = expenseStatsList[0];
-for (let i = 0; i < expenseStatsList.length; i++) {
-    if (expenseStatsList[i].percentage < currentExpenseWeakest.percentage) {
-        currentExpenseWeakest = expenseStatsList[i];
-    }
-}
+const currentExpenseWeakest = findLowestPercentageStats(expenseStatsList);
 console.log(currentExpenseWeakest.expenseCategory + " is the smallest expense category with " + formatPercentage(currentExpenseWeakest.percentage));
 
 const expenseSpread = currentExpenseLeader.percentage - currentExpenseWeakest.percentage;
