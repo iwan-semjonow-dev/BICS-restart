@@ -431,6 +431,20 @@ GitHub is synchronized with `origin/main`.
 - This is a refactor-lite step from repeated spread formulas to reusable function logic while remaining JavaScript data-first and console-first.
 - DOM, UI, CSS, HTML changes, localStorage, React, backend, dashboard, charts, forms, and new scope were not started.
 - Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
+- JavaScript reusable spread level classification checkpoint completed: spread classification logic was extracted into `getSpreadLevel(spread, highThreshold, moderateThreshold)`.
+- The function receives a numeric `spread` plus two numeric thresholds: `highThreshold` for the `high` border and `moderateThreshold` for the `moderate` border.
+- If `spread > highThreshold`, the function returns `"high"`; else if `spread > moderateThreshold`, it returns `"moderate"`; otherwise, it returns `"balanced"`.
+- The function returns text, not a formatted percentage, and it does not use `console.log` or `formatPercentage`.
+- This separates classification logic from presentation: the reusable function decides the level, while console output remains outside the function.
+- `bicsSpreadLevel` now uses `getSpreadLevel(bicsSpread, bicsSpreadThreshold, bicsSpreadModerateThreshold)`, and the new output is `BICS spread level: high`.
+- `expenseSpreadLevel` now uses `getSpreadLevel(expenseSpread, expenseSpreadThreshold, expenseSpreadModerateThreshold)`, and the new output is `Expense spread level: high`.
+- The same function works for both BICS and practical expense analytics because it depends only on numeric spread and thresholds, not on BICS names or expense names.
+- The first user attempt missed one closing brace, then the function syntax was corrected.
+- `calculateStatsSpread`, `findHighestPercentageStats`, and `findLowestPercentageStats` were not changed.
+- The old BICS spread insight `if` block and the old expense spread insight `if` block were not replaced yet, so the final existing output meaning did not change.
+- This is a safe refactor-lite step: reusable spread level values are calculated first, and those values can be used inside insight logic later.
+- DOM, UI, CSS, HTML changes, localStorage, React, backend, dashboard, charts, forms, and new scope were not started.
+- Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
 - JavaScript practical expense category spread checkpoint completed: numeric `expenseSpread` is calculated as `currentExpenseLeader.percentage - currentExpenseWeakest.percentage`.
 - `currentExpenseLeader` provides the largest practical expense category, and `currentExpenseWeakest` provides the smallest practical expense category.
 - `expenseSpread` remains numeric, and `const` is correct because the value is calculated once and not reassigned.

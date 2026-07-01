@@ -357,8 +357,22 @@ function calculateStatsSpread(highestStats, lowestStats) {
 const bicsSpread = calculateStatsSpread(currentLeader, currentWeakest);
 console.log("BICS spread is " + formatPercentage(bicsSpread));
 
+function getSpreadLevel(spread, highThreshold, moderateThreshold) {
+    if (spread > highThreshold) {
+        return "high";
+    } else if (spread > moderateThreshold) {
+        return "moderate";
+    } else {
+        return "balanced";
+    }
+}
+
 const bicsSpreadThreshold = 50;
 const bicsSpreadModerateThreshold = 25;
+
+const bicsSpreadLevel = getSpreadLevel(bicsSpread, bicsSpreadThreshold, bicsSpreadModerateThreshold);
+console.log("BICS spread level: " + bicsSpreadLevel);
+
 
 if (bicsSpread > bicsSpreadThreshold) {
     console.log("BICS spending is highly concentrated in " + currentLeader.category + " at " + formatPercentage(currentLeader.percentage));
@@ -379,6 +393,10 @@ console.log("Expense spread is " + formatPercentage(expenseSpread));
 
 const expenseSpreadThreshold = 50;
 const expenseSpreadModerateThreshold = 25;
+
+const expenseSpreadLevel = getSpreadLevel(expenseSpread, expenseSpreadThreshold, expenseSpreadModerateThreshold);
+console.log("Expense spread level: " + expenseSpreadLevel);
+
 if (expenseSpread > expenseSpreadThreshold) {
     console.log("Expense spread is highly concentrated in " + currentExpenseLeader.expenseCategory + " at " + formatPercentage(currentExpenseLeader.percentage));
 } else if (expenseSpread > expenseSpreadModerateThreshold) {
