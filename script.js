@@ -373,15 +373,17 @@ function getSpreadLevel(spread, highThreshold, moderateThreshold) {
 const bicsSpreadLevel = getSpreadLevel(bicsSpread, bicsSpreadThreshold, bicsSpreadModerateThreshold);
 console.log("BICS spread level: " + bicsSpreadLevel);
 
-let bicsSpreadInsight;
+function getBicsSpreadInsight(spreadLevel, leaderStats) {
 
-if (bicsSpreadLevel === "high") {
-    bicsSpreadInsight = "BICS spending is highly concentrated in " + currentLeader.category + " at " + formatPercentage(currentLeader.percentage);
-} else if (bicsSpreadLevel === "moderate") {
-    bicsSpreadInsight = "BICS spending has moderate concentration in " + currentLeader.category;
-} else {
-    bicsSpreadInsight = "BICS spending is more balanced";
+    if (spreadLevel === "high") {
+        return "BICS spending is highly concentrated in " + leaderStats.category + " at " + formatPercentage(leaderStats.percentage);
+    } else if (spreadLevel === "moderate") {
+        return "BICS spending has moderate concentration in " + leaderStats.category;
+    } else {
+        return "BICS spending is more balanced";
+    }
 }
+const bicsSpreadInsight = getBicsSpreadInsight(bicsSpreadLevel, currentLeader);
 console.log(bicsSpreadInsight);
 
 const currentExpenseLeader = findHighestPercentageStats(expenseStatsList);

@@ -502,6 +502,19 @@ GitHub is synchronized with `origin/main`.
 - The final expense insight output meaning did not change.
 - DOM, UI, CSS, HTML changes, localStorage, React, backend, dashboard, charts, forms, and new scope were not started.
 - Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
+- JavaScript BICS spread insight function extraction checkpoint completed: `getBicsSpreadInsight(spreadLevel, leaderStats)` now returns the selected BICS spread insight message.
+- `bicsSpreadInsight` now stores the returned string from `getBicsSpreadInsight(bicsSpreadLevel, currentLeader)`, and `console.log(bicsSpreadInsight)` remains outside the function.
+- With the current data, the key output remains `BICS spending is highly concentrated in Signal at 80.26%`.
+- `spreadLevel` and `leaderStats` are function parameters; inside the function, the code uses `spreadLevel` instead of external `bicsSpreadLevel` and `leaderStats` instead of external `currentLeader`.
+- The function uses `return`, not `console.log`, so message selection stays inside the function while output stays outside the function.
+- JavaScript variable names are case-sensitive, so `BicsSpreadInsight` and `bicsSpreadInsight` are different identifiers.
+- The old `let bicsSpreadInsight` block had to be removed to avoid declaring `bicsSpreadInsight` twice in the same scope.
+- Trailing whitespace was removed after `git diff --check` reported it during review.
+- The expense spread insight block was not changed.
+- `getSpreadLevel`, `calculateStatsSpread`, `findHighestPercentageStats`, and `findLowestPercentageStats` were not changed; the only reusable helper added in this checkpoint is `getBicsSpreadInsight`.
+- The final BICS insight output meaning did not change.
+- DOM, UI, CSS, HTML changes, localStorage, React, backend, dashboard, charts, forms, and new scope were not started.
+- Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
 - JavaScript practical expense category spread checkpoint completed: numeric `expenseSpread` is calculated as `currentExpenseLeader.percentage - currentExpenseWeakest.percentage`.
 - `currentExpenseLeader` provides the largest practical expense category, and `currentExpenseWeakest` provides the smallest practical expense category.
 - `expenseSpread` remains numeric, and `const` is correct because the value is calculated once and not reassigned.
