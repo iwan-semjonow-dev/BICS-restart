@@ -486,6 +486,22 @@ GitHub is synchronized with `origin/main`.
 - This is a safe refactor-lite step that uses the existing reusable level for expense insight only.
 - DOM, UI, CSS, HTML changes, localStorage, React, backend, dashboard, charts, forms, and new scope were not started.
 - Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
+- JavaScript expense spread insight message separation checkpoint completed: the expense spread insight block now stores the selected message in `expenseSpreadInsight` before printing it.
+- `expenseSpreadLevel` still controls the `if / else if / else` logic, while `expenseSpreadInsight` stores the message that should be shown.
+- `expenseSpreadInsight` is declared with `let` because its value is assigned later inside the `if`, `else if`, or `else` branch.
+- Every branch must assign a value to `expenseSpreadInsight`, so the shared output line always has a defined message to print.
+- The `if` block now selects a message by assigning a string to `expenseSpreadInsight` instead of printing immediately.
+- `console.log(expenseSpreadInsight)` now happens once after the `if` block.
+- With the current data, the key output remains `Expense spread is highly concentrated in accessories at 80.26%`.
+- The conditions should still check `expenseSpreadLevel`, not `expenseSpreadInsight`.
+- The corrected mistake was that the `else` branch must assign to `expenseSpreadInsight`, not call `console.log` directly, when one shared `console.log(expenseSpreadInsight)` is used after the block.
+- The trailing blank line at EOF was removed after `git diff --check` reported it.
+- This separates message selection from message output and mirrors the previous BICS spread insight message separation checkpoint.
+- The BICS spread insight block was not changed.
+- `getSpreadLevel`, `calculateStatsSpread`, `findHighestPercentageStats`, and `findLowestPercentageStats` were not changed.
+- The final expense insight output meaning did not change.
+- DOM, UI, CSS, HTML changes, localStorage, React, backend, dashboard, charts, forms, and new scope were not started.
+- Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
 - JavaScript practical expense category spread checkpoint completed: numeric `expenseSpread` is calculated as `currentExpenseLeader.percentage - currentExpenseWeakest.percentage`.
 - `currentExpenseLeader` provides the largest practical expense category, and `currentExpenseWeakest` provides the smallest practical expense category.
 - `expenseSpread` remains numeric, and `const` is correct because the value is calculated once and not reassigned.

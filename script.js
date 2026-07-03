@@ -399,10 +399,12 @@ const expenseSpreadModerateThreshold = 25;
 const expenseSpreadLevel = getSpreadLevel(expenseSpread, expenseSpreadThreshold, expenseSpreadModerateThreshold);
 console.log("Expense spread level: " + expenseSpreadLevel);
 
+let expenseSpreadInsight;
 if (expenseSpreadLevel === "high") {
-    console.log("Expense spread is highly concentrated in " + currentExpenseLeader.expenseCategory + " at " + formatPercentage(currentExpenseLeader.percentage));
+    expenseSpreadInsight = "Expense spread is highly concentrated in " + currentExpenseLeader.expenseCategory + " at " + formatPercentage(currentExpenseLeader.percentage);
 } else if (expenseSpreadLevel === "moderate") {
-    console.log("Expense spread has moderate concentration in " + currentExpenseLeader.expenseCategory);
+    expenseSpreadInsight = "Expense spread has moderate concentration in " + currentExpenseLeader.expenseCategory;
 } else {
-    console.log("Expense spread is more balanced");
+    expenseSpreadInsight = "Expense spread is more balanced";
 }
+console.log(expenseSpreadInsight);
