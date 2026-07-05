@@ -326,15 +326,23 @@ function findHighestPercentageStats(statsList) {
 const currentLeader = findHighestPercentageStats(bicsStatsList);
 console.log(currentLeader.category + " is the strongest BICS category with " + formatPercentage(currentLeader.percentage));
 
+
+
 const otherCategoriesTotal = totalAmount - currentLeader.total;
 console.log("Other BICS categories total excluding " + currentLeader.category + ": " + otherCategoriesTotal);
-if (currentLeader.total > otherCategoriesTotal) {
-    console.log(currentLeader.category + " total is higher than all other BICS categories combined");
-} else if (currentLeader.total === otherCategoriesTotal) {
-    console.log(currentLeader.category + " total is equal to all other BICS categories combined");
-} else {
-    console.log(currentLeader.category + " total is lower than all other BICS categories combined");
+
+function getLeaderVsOtherCategoriesInsight(leaderStats, otherTotal) {
+
+    if (leaderStats.total > otherTotal) {
+        return leaderStats.category + " total is higher than all other BICS categories combined";
+    } else if (leaderStats.total === otherTotal) {
+        return leaderStats.category + " total is equal to all other BICS categories combined";
+    } else {
+        return leaderStats.category + " total is lower than all other BICS categories combined";
+    }
 }
+const leaderVsOtherCategoriesInsight = getLeaderVsOtherCategoriesInsight(currentLeader, otherCategoriesTotal);
+console.log(leaderVsOtherCategoriesInsight);
 
 function findLowestPercentageStats(statsList) {
     let lowestStats = statsList[0];

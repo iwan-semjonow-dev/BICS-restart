@@ -526,6 +526,18 @@ GitHub is synchronized with `origin/main`.
 - The final expense insight output meaning did not change.
 - DOM, UI, CSS, HTML changes, localStorage, React, backend, dashboard, charts, forms, and new scope were not started.
 - Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
+- JavaScript leader versus other BICS categories insight function extraction checkpoint completed: `getLeaderVsOtherCategoriesInsight(leaderStats, otherTotal)` now returns the selected comparison message.
+- The function compares numeric `leaderStats.total` with numeric `otherTotal` and returns the existing higher, equal, or lower message string.
+- `leaderVsOtherCategoriesInsight` now stores the returned string from `getLeaderVsOtherCategoriesInsight(currentLeader, otherCategoriesTotal)`, and `console.log(leaderVsOtherCategoriesInsight)` remains outside the function.
+- With the current data, the key output remains `Signal total is higher than all other BICS categories combined`.
+- `leaderStats` and `otherTotal` are function parameters; inside the function, the code uses `leaderStats.total`, `leaderStats.category`, and `otherTotal` instead of relying on external `currentLeader` or `otherCategoriesTotal`.
+- The function uses `return`, not `console.log`, so message selection stays inside the function while output stays outside the function.
+- The old direct `if / else if / else` `console.log` block was removed, so the comparison message is printed once through `leaderVsOtherCategoriesInsight`.
+- This checkpoint still compares numeric totals, not percentages, and `formatPercentage` is not used.
+- `otherCategoriesTotal` calculation, `findHighestPercentageStats`, `getBicsSpreadInsight`, `getExpenseSpreadInsight`, `getSpreadLevel`, `calculateStatsSpread`, and `findLowestPercentageStats` were not changed.
+- The final leader versus other categories insight output meaning did not change.
+- DOM, UI, CSS, HTML changes, localStorage, React, backend, dashboard, charts, forms, and new scope were not started.
+- Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
 - JavaScript practical expense category spread checkpoint completed: numeric `expenseSpread` is calculated as `currentExpenseLeader.percentage - currentExpenseWeakest.percentage`.
 - `currentExpenseLeader` provides the largest practical expense category, and `currentExpenseWeakest` provides the smallest practical expense category.
 - `expenseSpread` remains numeric, and `const` is correct because the value is calculated once and not reassigned.
