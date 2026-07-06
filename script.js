@@ -297,13 +297,18 @@ if (investChaosDifference < 0 && (Math.abs(investChaosDifference) > investChaosD
 
 const investChaosAmountDifference = investStats.total - chaosStats.total;
 console.log("Invest vs Chaos amount difference: " + investChaosAmountDifference);
-if (investChaosAmountDifference > 0) {
-    console.log("Invest total is higher than Chaos by " + Math.abs(investChaosAmountDifference));
-} else if (investChaosAmountDifference < 0) {
-    console.log("Chaos total is higher than Invest by " + Math.abs(investChaosAmountDifference));
-} else {
-    console.log("Invest and Chaos totals are equal");
+
+function getInvestChaosAmountInsight(amountDifference) {
+    if (amountDifference > 0) {
+        return "Invest total is higher than Chaos by " + Math.abs(amountDifference);
+    } else if (amountDifference < 0) {
+        return "Chaos total is higher than Invest by " + Math.abs(amountDifference);
+    } else {
+        return "Invest and Chaos totals are equal";
+    }
 }
+const investChaosAmountInsight = getInvestChaosAmountInsight(investChaosAmountDifference);
+console.log(investChaosAmountInsight);
 
 const investChaosAmountDifferenceThreshold = 300;
 if (Math.abs(investChaosAmountDifference) > investChaosAmountDifferenceThreshold) {
