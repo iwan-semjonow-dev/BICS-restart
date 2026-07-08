@@ -300,7 +300,10 @@ function getInvestChaosShareGapInsight(percentageDifference, threshold) {
 const investChaosShareGapInsight = getInvestChaosShareGapInsight(investChaosDifference, investChaosDifferenceThreshold);
 console.log(investChaosShareGapInsight);
 
-if (investChaosDifference < 0 && (Math.abs(investChaosDifference) > investChaosDifferenceThreshold)) {
+function isChaosShareNoticeablyHigher(percentageDifference, threshold) {
+    return percentageDifference < 0 && Math.abs(percentageDifference) > threshold;
+}
+if (isChaosShareNoticeablyHigher(investChaosDifference, investChaosDifferenceThreshold)) {
     console.log("Chaos share is noticeably higher than Invest");
 }
 

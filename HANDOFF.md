@@ -588,6 +588,17 @@ GitHub is synchronized with `origin/main`.
 - The final Invest vs Chaos share gap insight output meaning did not change.
 - DOM, UI, CSS, HTML changes, localStorage, React, backend, dashboard, charts, forms, and new scope were not started.
 - Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
+- JavaScript targeted Chaos warning condition helper checkpoint completed: `isChaosShareNoticeablyHigher(percentageDifference, threshold)` now returns a boolean value.
+- The helper checks `percentageDifference < 0 && Math.abs(percentageDifference) > threshold`, so it answers whether Chaos share is both higher than Invest and beyond the noticeable gap threshold.
+- The external `if` now calls `isChaosShareNoticeablyHigher(investChaosDifference, investChaosDifferenceThreshold)` before printing `Chaos share is noticeably higher than Invest`.
+- The helper uses parameters instead of relying on external `investChaosDifference` or `investChaosDifferenceThreshold`.
+- The function returns `true` or `false`, not a message string; the warning message remains inside the external `if` block.
+- With the current demo data, the warning does not print because `investChaosDifference` is positive, meaning Invest is higher than Chaos.
+- The earlier incorrect `undefined` output was removed by returning a boolean and avoiding a direct `console.log` of the helper result.
+- The threshold value remains `5`, and the condition still uses `>`, not `>=`.
+- The share insight, share gap insight, amount blocks, helper functions, calculations, transaction data, category names, and warning text were not changed.
+- DOM, UI, CSS, HTML changes, localStorage, React, backend, dashboard, charts, forms, and new scope were not started.
+- Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
 - JavaScript practical expense category spread checkpoint completed: numeric `expenseSpread` is calculated as `currentExpenseLeader.percentage - currentExpenseWeakest.percentage`.
 - `currentExpenseLeader` provides the largest practical expense category, and `currentExpenseWeakest` provides the smallest practical expense category.
 - `expenseSpread` remains numeric, and `const` is correct because the value is calculated once and not reassigned.
