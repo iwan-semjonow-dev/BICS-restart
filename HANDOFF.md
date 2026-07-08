@@ -575,6 +575,19 @@ GitHub is synchronized with `origin/main`.
 - The final Invest vs Chaos share insight output meaning did not change.
 - DOM, UI, CSS, HTML changes, localStorage, React, backend, dashboard, charts, forms, and new scope were not started.
 - Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
+- JavaScript Invest vs Chaos share gap insight function extraction checkpoint completed: `getInvestChaosShareGapInsight(percentageDifference, threshold)` now returns the selected percentage gap insight message.
+- The function receives two parameters, `percentageDifference` and `threshold`, and compares `Math.abs(percentageDifference) > threshold`.
+- The function returns the existing `Invest and Chaos shares have a noticeable gap` or `Invest and Chaos shares are close` message string.
+- `investChaosShareGapInsight` now stores the returned string from `getInvestChaosShareGapInsight(investChaosDifference, investChaosDifferenceThreshold)`, and `console.log(investChaosShareGapInsight)` remains outside the function.
+- With the current data, the key output remains `Invest and Chaos shares have a noticeable gap`.
+- Inside the function, the code uses the parameters `percentageDifference` and `threshold` instead of relying on external `investChaosDifference` or `investChaosDifferenceThreshold`.
+- The function uses `return`, not `console.log`, so message selection stays inside the function while output stays outside the function.
+- The old direct `if / else` `console.log` block for the share gap threshold was removed.
+- The threshold value remains `5`, and the condition still uses `>`, not `>=`, so a difference exactly equal to `5` still reaches the `else` branch.
+- `investChaosDifference` calculation, transaction data, category names, threshold value, threshold condition, amount blocks, targeted Chaos warning, and helper functions were not changed.
+- The final Invest vs Chaos share gap insight output meaning did not change.
+- DOM, UI, CSS, HTML changes, localStorage, React, backend, dashboard, charts, forms, and new scope were not started.
+- Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
 - JavaScript practical expense category spread checkpoint completed: numeric `expenseSpread` is calculated as `currentExpenseLeader.percentage - currentExpenseWeakest.percentage`.
 - `currentExpenseLeader` provides the largest practical expense category, and `currentExpenseWeakest` provides the smallest practical expense category.
 - `expenseSpread` remains numeric, and `const` is correct because the value is calculated once and not reassigned.

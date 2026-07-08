@@ -290,11 +290,15 @@ const investChaosShareInsight = getInvestChaosShareInsight(investChaosDifference
 console.log(investChaosShareInsight);
 
 const investChaosDifferenceThreshold = 5;
-if (Math.abs(investChaosDifference) > investChaosDifferenceThreshold) {
-    console.log("Invest and Chaos shares have a noticeable gap");
-} else {
-    console.log("Invest and Chaos shares are close");
+function getInvestChaosShareGapInsight(percentageDifference, threshold) {
+    if (Math.abs(percentageDifference) > threshold) {
+        return "Invest and Chaos shares have a noticeable gap";
+    } else {
+        return "Invest and Chaos shares are close";
+    }
 }
+const investChaosShareGapInsight = getInvestChaosShareGapInsight(investChaosDifference, investChaosDifferenceThreshold);
+console.log(investChaosShareGapInsight);
 
 if (investChaosDifference < 0 && (Math.abs(investChaosDifference) > investChaosDifferenceThreshold)) {
     console.log("Chaos share is noticeably higher than Invest");
