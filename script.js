@@ -310,7 +310,10 @@ if (isChaosShareNoticeablyHigher(investChaosDifference, investChaosDifferenceThr
     console.log("Chaos share is noticeably higher than Invest");
 }
 
-const investChaosAmountDifference = investStats.total - chaosStats.total;
+function calculateTotalDifference(firstStats, secondStats) {
+    return firstStats.total - secondStats.total;
+}
+const investChaosAmountDifference = calculateTotalDifference(investStats, chaosStats);
 console.log("Invest vs Chaos amount difference: " + investChaosAmountDifference);
 
 function getInvestChaosAmountInsight(amountDifference) {

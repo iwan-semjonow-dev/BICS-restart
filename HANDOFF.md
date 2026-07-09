@@ -609,6 +609,16 @@ GitHub is synchronized with `origin/main`.
 - The share insight, share gap insight, Chaos warning, amount blocks, helper functions, calculations, transaction data, category names, and output text were not changed.
 - DOM, UI, CSS, HTML changes, localStorage, React, backend, dashboard, charts, forms, and new scope were not started.
 - Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
+- JavaScript reusable total difference calculation checkpoint completed: `calculateTotalDifference(firstStats, secondStats)` now returns a numeric total difference.
+- The function receives two stats objects, `firstStats` and `secondStats`, and calculates `firstStats.total - secondStats.total`.
+- The function returns a number, not a message string, and it does not use `console.log` or `formatPercentage`.
+- `investChaosAmountDifference` is now created with `calculateTotalDifference(investStats, chaosStats)`.
+- The original console output remains `Invest vs Chaos amount difference: 370`.
+- Downstream Invest vs Chaos amount insights keep the same meaning: `Invest total is higher than Chaos by 370` and `Invest and Chaos totals have a noticeable amount gap`.
+- This helper mirrors `calculatePercentageDifference(...)`, but works with `.total` instead of `.percentage`.
+- The share insight, share gap insight, Chaos warning, amount insight functions, thresholds, helper functions, calculations, transaction data, category names, and output text were not changed.
+- DOM, UI, CSS, HTML changes, localStorage, React, backend, dashboard, charts, forms, and new scope were not started.
+- Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
 - JavaScript practical expense category spread checkpoint completed: numeric `expenseSpread` is calculated as `currentExpenseLeader.percentage - currentExpenseWeakest.percentage`.
 - `currentExpenseLeader` provides the largest practical expense category, and `currentExpenseWeakest` provides the smallest practical expense category.
 - `expenseSpread` remains numeric, and `const` is correct because the value is calculated once and not reassigned.
