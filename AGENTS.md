@@ -514,6 +514,21 @@ Do not use Superpowers mechanically for every tiny action.
 
 ---
 
+## BICS Skill Preflight Checklist
+
+Before every BICS checkpoint, Codex must:
+
+1. Verify which Superpowers skills are available; if the visible list is incomplete, re-discover the current plugin or cache path.
+2. Apply `superpowers:using-superpowers` before taking checkpoint-related action.
+3. Apply `superpowers:brainstorming` before selecting a coding checkpoint; do not implement code until the required design process is approved.
+4. Use `superpowers:systematic-debugging` before fixing unexpected output, syntax errors, failed checks, or unexpected Git state.
+5. Use `superpowers:writing-plans` for approved multi-step work before implementation.
+6. Use `superpowers:verification-before-completion` before saying a checkpoint is complete, then run fresh project checks.
+7. Treat a missing or unloadable required skill as a blocker: stop, explain the issue, re-discover the path when possible, and wait for the user's decision. Never bypass a missing required skill.
+8. Never run `git add`, commit, or push without explicit user confirmation.
+
+---
+
 ## Goal Usage Rule
 
 The long-term BICS direction is documented in `HANDOFF.md`.

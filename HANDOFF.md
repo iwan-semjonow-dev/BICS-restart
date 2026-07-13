@@ -39,7 +39,7 @@ The project must follow:
 
 - Git rules from `AGENTS.md`: no `git add`, commit, push, rebase, reset, or force push without explicit confirmation.
 - Language rules from `AGENTS.md`: visible UI text, transaction titles, reasons, labels, buttons, and section names should be in English; Russian is allowed for comments, teaching explanations, and learning notes.
-- Superpowers usage from `AGENTS.md`: use `superpowers:using-superpowers` at the beginning of a BICS work session, use planning/debugging/verification skills when they help, and re-discover stale Superpowers paths before continuing.
+- BICS Skill Preflight Checklist: `AGENTS.md` contains the canonical mandatory checklist. Future BICS sessions must apply it before choosing a checkpoint, including Superpowers discovery, `using-superpowers`, and `brainstorming`.
 
 At the beginning of a new BICS work session, Codex should read or review `README.md`, `AGENTS.md`, and `HANDOFF.md` before suggesting the next step.
 
