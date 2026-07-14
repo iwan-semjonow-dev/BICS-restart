@@ -423,6 +423,19 @@ function getBicsSpreadInsight(spreadLevel, leaderStats) {
 const bicsSpreadInsight = getBicsSpreadInsight(bicsSpreadLevel, currentLeader);
 console.log(bicsSpreadInsight);
 
+const bicsReport = {
+    totalAmount: totalAmount,
+    statsList: bicsStatsList,
+    leader: currentLeader,
+    weakest: currentWeakest,
+    otherCategoriesTotal: otherCategoriesTotal,
+    spread: bicsSpread,
+    spreadLevel: bicsSpreadLevel,
+    leaderVsOtherCategoriesInsight: leaderVsOtherCategoriesInsight,
+    spreadInsight: bicsSpreadInsight
+};
+console.log(bicsReport);
+
 const currentExpenseLeader = findHighestPercentageStats(expenseStatsList);
 console.log(currentExpenseLeader.expenseCategory + " is the largest expense category with " + formatPercentage(currentExpenseLeader.percentage));
 
