@@ -465,3 +465,15 @@ function getExpenseSpreadInsight(spreadLevel, leaderStats) {
 }
 const expenseSpreadInsight = getExpenseSpreadInsight(expenseSpreadLevel, currentExpenseLeader);
 console.log(expenseSpreadInsight);
+
+const expenseReport = {
+    totalAmount: totalAmount,
+    statsList: expenseStatsList,
+    leader: currentExpenseLeader,
+    weakest: currentExpenseWeakest,
+    otherCategoriesTotal: otherExpenseCategoriesTotal,
+    spread: expenseSpread,
+    spreadLevel: expenseSpreadLevel,
+    spreadInsight: expenseSpreadInsight
+};
+console.log(expenseReport);

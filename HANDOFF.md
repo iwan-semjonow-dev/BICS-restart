@@ -789,7 +789,11 @@ GitHub is synchronized with `origin/main`.
 - JavaScript minimal `bicsReport` checkpoint completed: `bicsReport` is declared after the BICS spread insight block and before expense logic, and it only collects existing BICS results.
 - The object stores `totalAmount`, `statsList`, `leader`, `weakest`, `otherCategoriesTotal`, `spread`, `spreadLevel`, `leaderVsOtherCategoriesInsight`, and `spreadInsight` using existing variables.
 - A new `console.log(bicsReport)` prints the structured BICS report; no existing calculations, insight functions, or console output text were changed or removed.
-- `expenseReport`, `investChaosReport`, and `getExpenseLeaderVsOtherCategoriesInsight` were not started. DOM, UI, CSS, HTML changes, localStorage, React, backend, dashboard, charts, and forms remain out of scope.
+- At the `bicsReport` checkpoint, `expenseReport`, `investChaosReport`, and `getExpenseLeaderVsOtherCategoriesInsight` were not started. DOM, UI, CSS, HTML changes, localStorage, React, backend, dashboard, charts, and forms remain out of scope.
+- JavaScript minimal `expenseReport` checkpoint completed: `expenseReport` is declared after the expense spread insight block and only collects existing practical expense results.
+- The object stores `totalAmount`, `statsList`, `leader`, `weakest`, `otherCategoriesTotal`, `spread`, `spreadLevel`, and `spreadInsight` using the existing expense variables, including `otherExpenseCategoriesTotal`.
+- A new `console.log(expenseReport)` prints the structured practical expense report; `bicsReport`, existing calculations, insight functions, and console output text were not changed or removed.
+- `investChaosReport` and `getExpenseLeaderVsOtherCategoriesInsight` were not started. DOM, UI, CSS, HTML changes, localStorage, React, backend, dashboard, charts, and forms remain out of scope.
 
 ## Completed First JavaScript Plan
 
