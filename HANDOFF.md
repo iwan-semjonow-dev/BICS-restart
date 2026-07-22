@@ -63,6 +63,7 @@ Files:
 - `styles.css` — filled
 - `script.js` — active JavaScript learning file in data-first and console-first mode
 
+GitHub repository: `git@github.com:iwan-semjonow-dev/BICS.git`.
 GitHub is synchronized with `origin/main`.
 
 ## HTML Already Done
