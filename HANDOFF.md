@@ -49,7 +49,9 @@ A step is considered successful only when the user understands the idea, makes o
 
 ## Current Project State
 
-Project folder: `d:\Codex\BICS-restart`
+Active project folder: `D:\Codex\BICS-clean-test`
+
+The previous `D:\Codex\BICS-restart` folder had the interactive Codex helper error `helper_unknown_error: setup refresh had errors`; use the active clean-test folder for BICS work.
 
 Files:
 - `README.md` — filled
@@ -801,6 +803,10 @@ GitHub is synchronized with `origin/main`.
 - JavaScript `getExpenseLeaderVsOtherCategoriesInsight` checkpoint completed: the function mirrors the BICS leader-versus-other-categories insight for practical expenses.
 - It compares `leaderStats.total` with `otherTotal`, uses `leaderStats.expenseCategory`, and returns a higher, equal, or lower message. Its result is created from `currentExpenseLeader` and `otherExpenseCategoriesTotal` and printed with `console.log`.
 - With the current data, it prints `accessories total is higher than all other expense categories combined`. The three report objects were not changed, the new insight was not added to `expenseReport`, and `appReport` was not created.
+- JavaScript `expenseReport` leader comparison insight checkpoint completed: `expenseReport` now includes `leaderVsOtherCategoriesInsight: expenseLeaderVsOtherCategoriesInsight` and therefore collects the existing practical expense leader-versus-other-categories message.
+- `bicsReport`, `investChaosReport`, calculations, insight functions, and existing text output were not changed; no DOM, UI, forms, localStorage, React, backend, dashboard, charts, or `appReport` were added.
+- Verification passed: `node --check script.js`, `node script.js`, and `git diff --check`.
+- The checkpoint was committed and pushed as `de4f20a refactor: add expense leader comparison insight to report`.
 
 ## Completed First JavaScript Plan
 
